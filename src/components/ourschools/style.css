@@ -1,0 +1,32 @@
+/* style.css */
+
+.extracurricular-container {
+    text-align: center; /* Center align the content */
+    font-size: x-large;
+    color: red;
+  }
+  .h2{
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .extracurricular {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 20px; /* Gap between items */
+  }
+  
+  .extracurricular-item {
+    text-align: center;
+  }
+  
+  .extracurricular-item img {
+    width: 90%; /* Ensure images fill their container */
+    height: 300px; /* Set a fixed height for the images */
+    object-fit: cover; /* Maintain aspect ratio and fill container */
+    border-radius: 10px; /* Add border radius */
+  }
+  
+  .extracurricular-item p {
+    margin-top: 10px; /* Add space below the image */
+  }

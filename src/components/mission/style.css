@@ -1,0 +1,53 @@
+.mission-container {
+    padding: 20px; /* Padding inside the container */
+    background-color:white;
+  }
+  
+  .mission-item {
+    margin-bottom: 20px; /* Spacing between each mission item */
+  }
+  
+  .mission-item h2 {
+    color: red; /* Heading color */
+
+  }
+  
+  .mission-item p {
+    color: black; /* Paragraph text color */
+  }
+  .mission-vision-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .mission,
+  .vision,
+  .covalues {
+    padding:20px 20px;
+    color: darkgreen; /* Text color */
+    font-weight: bold;
+    text-align: center;
+  }
+  .mission-vision-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  border: 2px solid darkgreen; /* Border style */
+  border-radius: 10px; /* Border radius */
+}
+
+.mission,
+.vision,
+.covalues {
+  padding: 30px 30px;
+  color: darkgreen; /* Text color */
+  font-weight: bold;
+  text-align: center;
+  
+}
+
+  
+  

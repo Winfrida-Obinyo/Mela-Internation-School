@@ -1,0 +1,58 @@
+/* Styling for the choose-header */
+.choose-header {
+  color: red; /* Dark green color for the header */
+  text-align: center;
+
+}
+
+/* Styling for the reasons container */
+.reasons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Styling for each row of reason cards */
+.reasons-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Styling for each reason card */
+.reason-card {
+  width: calc(33.33% - 10px); /* 33.33% width for each card with 10px gap between */
+  padding: 20px;
+  border-radius: 2px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  text-align: center;
+  border: 2px solid #e0e0e0; /* Add border to each card */
+}
+
+/* Styling for the icon container */
+.icon-container {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #006400; /* Dark green color for icons */
+}
+
+/* Styling for the reason card title */
+.reason-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: red;
+}
+
+/* Styling for the reason card description */
+.reason-card p {
+  font-size: 14px;
+  color: black;
+  line-height: 1.5;
+}
+
+
+
+
+
+

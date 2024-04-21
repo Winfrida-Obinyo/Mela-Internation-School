@@ -1,0 +1,73 @@
+/* Navbar.css */
+
+.navbar {
+    background-color: #ffffff;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-logo img {
+    max-width: 100px;
+  }
+  
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-item {
+    margin-left: 50px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #333333;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #00ff95; /* Change color on hover */
+  }
+  
+  .search-icon {
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  
+  .enroll-button {
+    padding: 10px 20px;
+    background-color: green;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .enroll-button:hover {
+    background-color: darkgreen; /* Darker shade on hover */
+  }
+  .dropdown-menu {
+    
+    padding: 10px; /* Add padding for better spacing */
+  }
+  
+  .dropdown-menu a {
+    display: block;
+    color: darkgreen; /* Set text color to white */
+    text-decoration: none;
+    padding: 8px 12px; /* Add padding for menu items */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+  }
+  
+  .dropdown-menu a:hover {
+    color: #00ff95; /* Change text color to lighter green on hover */
+  }
+  
