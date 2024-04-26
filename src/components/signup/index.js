@@ -26,8 +26,7 @@ const SignUpAdmin = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData); // Replace with your form submission logic
-    // Add form submission logic here (e.g., sending data to backend)
+    console.log(formData); 
   };
 
   return (
