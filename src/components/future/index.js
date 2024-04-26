@@ -1,11 +1,9 @@
 import React from 'react';
-import './style.css'; // Assuming you have a CSS file named Future.css for styling
-
+import './style.css'; 
 const Future = () => {
   return (
     <div className="future-container">
       <div className="future-background">
-        {/* Background image */}
         <img src="/images/preparatory.jpg" alt="Studying" className="background-image" />
       </div>
       <div className="future-content">

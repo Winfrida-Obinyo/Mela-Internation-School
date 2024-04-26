@@ -16,7 +16,6 @@ const JuniorHighSchool = () => {
         <h2 className="section-title">Junior High School</h2>
 
         <div className="image-container">
-          {/* Add appropriate images for junior high school */}
           <div className="image-item">
             <img src="/images/jun8.jpg" alt="Junior High School Image" />
           </div>
@@ -43,7 +42,6 @@ const JuniorHighSchool = () => {
           </div>
           
 
-          {/* More image items as needed */}
         </div>
 
         <div className="info-container">
@@ -150,7 +148,6 @@ const JuniorHighSchool = () => {
               )}
             </div>
             
-            {/* Add more dropdowns for other subjects or programs */}
           </div>
         </div>
 
@@ -177,7 +174,6 @@ const JuniorHighSchool = () => {
               Students at our junior high school delve into specialized subjects,
               preparing them for high school and future academic pursuits.
             </p>
-            {/* Add more specific areas of study */}
           </div>
 
           <div className="additional-right">

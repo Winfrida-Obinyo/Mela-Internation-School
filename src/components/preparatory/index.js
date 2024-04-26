@@ -6,21 +6,16 @@ import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 const PreparatorySchool = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
 
-  // Function to handle dropdown click
   const handleDropdownClick = (dropdownId) => {
     setActiveDropdown(activeDropdown === dropdownId ? null : dropdownId);
   };
 
   return (
     <div className="preparatory-school-container">
-      {/* Section with images and content */}
       <section className="left-section">
-        {/* Title above the images */}
         <h2 className="section-title">Preparatory School</h2>
 
-        {/* Image container using CSS grid */}
         <div className="image-container">
-          {/* Individual image items */}
           <div className="image-item">
             <img src="/images/prep1.jpg" alt="Preparatory School Image" />
           </div>
@@ -47,9 +42,7 @@ const PreparatorySchool = () => {
           </div>
         </div>
 
-        {/* Information below the images */}
         <div className="info-container">
-          {/* Left side - School Curriculum Overview */}
           <div className="info-left">
             <h3>School Curriculum Highlights</h3>
             <p>
@@ -66,7 +59,6 @@ const PreparatorySchool = () => {
             </p>
           </div>
 
-          {/* Right side - Dropdowns for Program Features */}
           <div className="info-right">
             <div className="dropdown">
               <button
@@ -85,7 +77,6 @@ const PreparatorySchool = () => {
               )}
             </div>
 
-            {/* Additional Dropdowns */}
             <div className="dropdown">
               <button
                 className="dropdown-btn"
@@ -123,9 +114,7 @@ const PreparatorySchool = () => {
           </div>
         </div>
 
-        {/* New section below Program Features */}
         <div className="additional-section">
-          {/* Left side - Curriculum Focus */}
           <div className="additional-left">
   <h3>Early Years Foundation Curriculum (Age 1-6)</h3>
   <h4>Prime Areas of Learning:</h4>
@@ -155,7 +144,6 @@ const PreparatorySchool = () => {
     and imaginative play, fostering self-expression and exploration.
   </p>
 
-  {/* Additional Curriculum Focus for Preparatory School */}
   <h3>Curriculum Focus</h3>
   <p>
     Our preparatory school curriculum is designed to cultivate critical thinking skills,
@@ -168,7 +156,6 @@ const PreparatorySchool = () => {
   </p>
 </div>
 
-          {/* Right side - Image */}
           <div className="additional-right">
             <img src="/images/pre.jpg" alt="Curriculum Focus Image" />
           </div>

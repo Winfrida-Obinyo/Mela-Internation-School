@@ -16,6 +16,7 @@ const Offer = () => {
               Our kindergarten program focuses on providing a nurturing and stimulating environment
               where young learners can develop foundational skills and social interactions.
             </p>
+            <button className="learn-more-button">Learn More</button>
           </div>
         </div>
         <div className="offer-item">
@@ -27,6 +28,7 @@ const Offer = () => {
               In our preparatory school, students engage in comprehensive learning experiences that
               prepare them for the academic challenges of higher levels.
             </p>
+            <button className="learn-more-button">Learn More</button>
           </div>
         </div>
         <div className="offer-item">
@@ -38,6 +40,7 @@ const Offer = () => {
               Our junior high school curriculum emphasizes critical thinking, exploration of diverse
               subjects, and character development to equip students for future success.
             </p>
+            <button className="learn-more-button">Learn More</button>
           </div>
         </div>
         <div className="offer-item">
@@ -49,6 +52,7 @@ const Offer = () => {
               Our senior high school program provides advanced education and specialized tracks
               to prepare students for college and career pathways.
             </p>
+            <button className="learn-more-button">Learn More</button>
           </div>
         </div>
       </div>
@@ -57,4 +61,5 @@ const Offer = () => {
 };
 
 export default Offer;
+
 

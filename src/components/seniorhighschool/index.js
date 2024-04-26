@@ -16,7 +16,6 @@ const SeniorHighSchool = () => {
         <h2 className="section-title">Senior High School</h2>
 
         <div className="image-container">
-          {/* Add appropriate images for senior high school */}
           <div className="image-item">
             <img src="/images/sen8.jpg" alt="Senior High School Image" />
           </div>
@@ -41,7 +40,6 @@ const SeniorHighSchool = () => {
           <div className="image-item">
             <img src="/images/sen5.jpg" alt="Senior High School Image" />
           </div>
-          {/* Add more images if needed */}
         </div>
 
         <div className="info-container">
@@ -101,7 +99,6 @@ const SeniorHighSchool = () => {
     )}
   </div>
 
-  {/* Add more dropdown sections here */}
   <div className="dropdown">
     <button
       className="dropdown-btn"
@@ -141,7 +138,6 @@ const SeniorHighSchool = () => {
 
 
 
-            {/* Add more dropdowns for other subjects or programs */}
           </div>
         </div>
 

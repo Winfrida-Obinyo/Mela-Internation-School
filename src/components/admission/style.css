@@ -1,11 +1,10 @@
-/* src/components/AdmissionForm.css */
 
 .admission-form-container {
   max-width: 700px;
   margin: 0 auto;
   padding: 60px;
   background-color: white;
-  border-radius: 20px; /* Rounded corners for the form container */
+  border-radius: 20px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -19,23 +18,23 @@
 }
 
 .form-label {
-  font-weight: normal; /* Set font weight to normal */
+  font-weight: normal; 
 }
 
 .form-label.required::after {
-  content: ' *'; /* Add red star after label content */
-  color: red; /* Set star color to red */
+  content: ' *'; 
+  color: red; 
 }
 
 .form-control {
   width: 100%;
-  padding: 12px; /* Adjust input field padding */
-  border-radius: 8px; /* Rounded corners for input fields */
+  padding: 12px; 
+  border-radius: 8px; 
   border: 1px solid #ced4da;
 }
 
 .form-control:placeholder-shown {
-  color: red; /* Change placeholder color to red for empty required fields */
+  color: red; 
 }
 
 .form-placeholder {
@@ -44,31 +43,29 @@
 }
 
 .submit-button {
-  width: 20%;
+  width: 100%;
   margin-top: 20px;
-  border-radius: 8px; /* Rounded corners for submit button */
+  border-radius: 50px; 
   background-color: darkgreen;
   padding: 10px;
   color: white;
   margin-left: 250px;
 }
 
-/* Custom styles for specific form elements */
 
 textarea.form-control {
-  resize: vertical; /* Allow vertical resizing of textarea */
+  resize: vertical; 
 }
 
 select.form-control {
-  appearance: none; /* Remove default select arrow */
+  appearance: none; 
 }
 
-/* Placeholder specific styles */
 
 .form-group .form-control::placeholder {
   color: #6c757d;
   font-size: 14px;
-  border-radius: 10px; /* Rounded corners for placeholder */
+  border-radius: 10px; 
 }
 
 

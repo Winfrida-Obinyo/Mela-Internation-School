@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css'; // Import the CSS file for styling
+import './style.css'; 
 
 const Mission = () => {
   return (

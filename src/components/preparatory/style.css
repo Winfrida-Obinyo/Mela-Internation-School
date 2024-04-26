@@ -1,127 +1,111 @@
-/* Styling for preparatory school container */
 .preparatory-school-container {
     padding: 20px;
     text-align: center;
   }
   
-  /* Styling for section title */
   .section-title {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: navy; /* Set color to navy blue */
+    color: navy; 
   }
   
-  /* Styling for image container */
   .image-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px; /* Increased gap between image items */
+    gap: 20px; 
   }
   
-  /* Styling for image items */
   .image-item {
     position: relative;
     overflow: hidden;
-    border-radius: 8px; /* Rounded corners for image items */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle box shadow for image items */
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   }
   
-  /* Styling for image within image items */
   .image-item img {
     width: 100%;
     height: auto;
     transition: transform 0.3s ease;
   }
   
-  /* Hover effect for images */
   .image-item:hover img {
     transform: scale(1.1);
   }
   
-  /* Styling for info container */
   .info-container {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
   }
   
-  /* Styling for left and right info sections */
   .info-left,
   .info-right {
     width: 48%;
   }
   
-  /* Styling for dropdown buttons */
   .dropdown-btn {
-    background-color: navy; /* Dark blue background color */
+    background-color: navy; 
     color: white;
     border: none;
     padding: 20px;
     cursor: pointer;
     width: 100%;
     text-align: left;
-    border-radius: 8px; /* Rounded corners for dropdown buttons */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle box shadow for dropdown buttons */
-    border-bottom: 5px solid white; /* Add bottom border to dropdown buttons */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-bottom: 5px solid white; 
   }
   
-  /* Styling for dropdown content */
   .dropdown-content {
     background-color: #f9f9f9;
-    padding: 20px; /* Increased padding for dropdown content */
+    padding: 20px;
     border: 1px solid #ddd;
     border-top: none;
-    border-radius: 0 0 8px 8px; /* Rounded bottom corners for dropdown content */
+    border-radius: 0 0 8px 8px; 
+    
     width: 90%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle box shadow for dropdown content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
   }
   
-  /* Styling for paragraphs within dropdown content */
   .dropdown-content p {
     margin: 0;
   }
   
-  /* Active state styling for dropdown button */
   .dropdown-btn.active {
     background-color: white;
-    color: navy; /* Dark blue text color */
+    color: navy; 
   }
   
-  /* Additional section styling */
   .additional-section {
     margin-top: 40px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Align items to the top */
+    align-items: flex-start; 
   }
   
-  /* Styling for left section within additional section */
   .additional-left {
     width: 60%;
   }
   
-  /* Styling for headings within additional left section */
   .additional-left h3,
   .additional-left h4 {
-    color: navy; /* Dark blue text color */
-    font-size: 1.2rem; /* Larger font size */
-    margin-bottom: 15px; /* Add bottom margin */
+    color: navy; 
+    font-size: 1.2rem; 
+    margin-bottom: 15px; 
   }
   
-  /* Styling for right section within additional section */
   .additional-right {
     width: 35%;
     display: flex;
-    justify-content: flex-start; /* Align content to the start (left) */
-    align-items: flex-start; /* Align content to the top */
-    margin-right: 220px; /* Adjusted right margin for additional-right */
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    margin-right: 220px; 
   }
   
-  /* Styling for image within additional right section */
   .additional-right img {
     width: 160%;
     height: auto;
-    border-radius: 8px; /* Rounded corners for the image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle box shadow to the image */
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   }
   

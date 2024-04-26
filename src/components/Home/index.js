@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './style.css'; // Import the CSS file for styling
+import './style.css'; 
 
 const HomePage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -36,13 +36,12 @@ const HomePage = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // Change image every 5 seconds
+    }, 5000); 
 
     return () => clearInterval(interval);
   }, []);
 
   const handleApplyForAdmission = () => {
-    // Handle apply for admission logic here
     console.log('Apply for Admission button clicked');
     // Redirect to admission page or perform other actions
   };

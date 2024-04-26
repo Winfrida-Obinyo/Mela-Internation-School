@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css'; // Import CSS for react-datepicker
-import './style.css'; // Optional: Import custom CSS for styling the form
+import 'react-datepicker/dist/react-datepicker.css'; 
+import './style.css'; 
 
 const EnrollmentForm = () => {
   const [formData, setFormData] = useState({
@@ -10,7 +10,7 @@ const EnrollmentForm = () => {
     phone: '',
     program: '',
     message: '',
-    enrollmentDate: null // New state for the enrollment date
+    enrollmentDate: null 
   });
 
   const handleInputChange = (e) => {
@@ -25,7 +25,6 @@ const EnrollmentForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    // Reset form after submission
     setFormData({
       fullname: '',
       email: '',
@@ -107,10 +106,14 @@ const EnrollmentForm = () => {
           cols="50"
         ></textarea><br /><br />
 
-        <button type="submit">Submit</button>
+        <div className="button-container">
+          <button type="submit">Enroll</button>
+          <button type="button" onClick={handleSubmit}>Reset</button>
+        </div>
       </form>
     </div>
   );
 };
 
 export default EnrollmentForm;
+

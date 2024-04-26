@@ -1,8 +1,6 @@
-// src/components/AdmissionForm.js
-
 import React, { useState } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
-import './style.css'; // Import custom CSS for form styles
+import './style.css'; 
 
 const AdmissionForm = () => {
   const [formData, setFormData] = useState({
@@ -28,9 +26,7 @@ const AdmissionForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here (e.g., send data to backend, show success message)
-    console.log(formData); // For demonstration, log form data to console
-    // Clear form fields after submission (optional)
+    console.log(formData); 
     setFormData({
       firstName: '',
       lastName: '',

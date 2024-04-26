@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import './style.css'; // Import CSS file for styling
+import './style.css'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
 
@@ -44,12 +44,10 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        {/* Logo */}
         <a href="/" className="navbar-logo">
-          <img src="/path/to/your/logo.png" alt="School Logo" />
+          <img src="/images/logo6.png" alt="School Logo" />
         </a>
 
-        {/* Navbar Menu */}
         <ul className="nav-menu">
           <li className="nav-item">
             <a href="#home" className="nav-link">Home</a>
@@ -120,12 +118,10 @@ const Navbar = () => {
           </li>
         </ul>
 
-        {/* Search Icon */}
         <div className="search-icon">
           <i className="fas fa-search"></i>
         </div>
 
-        {/* Enroll Now Button */}
         <a href="#enroll" className="enroll-button">Enroll Now</a>
       </div>
     </nav>

@@ -2,7 +2,6 @@ import React from 'react';
 import './style.css';
 
 const FeeStructure = () => {
-  // Define fee data directly within the component
   const feeData = {
     kindergarten: [
       { grade: 'Nursery', tuitionFees: 1500, otherFees: 200 },
@@ -26,7 +25,6 @@ const FeeStructure = () => {
     <div>
       <h1>Fee Structure</h1>
 
-      {/* Render fee table for Kindergarten */}
       <h2>Kindergarten</h2>
       <table className="fee-table">
         <thead>
@@ -49,7 +47,6 @@ const FeeStructure = () => {
         </tbody>
       </table>
 
-      {/* Render fee table for Preparatory School */}
       <h2>Preparatory School</h2>
       <table className="fee-table">
         <thead>
@@ -72,7 +69,6 @@ const FeeStructure = () => {
         </tbody>
       </table>
 
-      {/* Render fee table for Junior High School */}
       <h2>Junior High School</h2>
       <table className="fee-table">
         <thead>
@@ -95,7 +91,6 @@ const FeeStructure = () => {
         </tbody>
       </table>
 
-      {/* Render fee table for Senior High School */}
       <h2>Senior High School</h2>
       <table className="fee-table">
         <thead>
@@ -118,7 +113,6 @@ const FeeStructure = () => {
         </tbody>
       </table>
 
-      {/* Note section with fee change disclaimer */}
       <p className="note">
         Note: Fees are subject to change. Please contact us for the most up-to-date information.
       </p>

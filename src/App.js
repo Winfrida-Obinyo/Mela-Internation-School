@@ -15,6 +15,9 @@ import JuniorHighSchool from "./components/juniorhighschool";
 import SeniorHighSchool from "./components/seniorhighschool";
 import FeeStructure from "./components/feestructure";
 import EnrollmentForm from "./components/enrollnow";
+import SignUpAdmin from "./components/signup";
+import SigninPage from "./components/signin";
+import DisplayApplicants from "./components/display";
 
 function App(){
   return (
@@ -34,7 +37,11 @@ function App(){
      <JuniorHighSchool/>
      <SeniorHighSchool/>
      <FeeStructure/>
-     {/* <EnrollmentForm/> */}
+     <EnrollmentForm/>
+     <SignUpAdmin/>
+     <SigninPage/>
+     <DisplayApplicants/>
+
      
 
      

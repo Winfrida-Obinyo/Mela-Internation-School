@@ -6,21 +6,16 @@ import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 const Kindergarten = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
 
-  // Function to handle dropdown click
   const handleDropdownClick = (dropdownId) => {
     setActiveDropdown(activeDropdown === dropdownId ? null : dropdownId);
   };
 
   return (
     <div className="kindergarten-container">
-      {/* Section with images and content */}
       <section className="left-section">
-        {/* Title above the images */}
         <h2 className="section-title">Kindergarten</h2>
 
-        {/* Image container using CSS grid */}
         <div className="image-container">
-          {/* Individual image items */}
           <div className="image-item">
             <img src="/images/kinder1.jpg" alt="Kindergarten Image" />
           </div>
@@ -47,9 +42,7 @@ const Kindergarten = () => {
           </div>
         </div>
 
-        {/* Information below the images */}
         <div className="info-container">
-          {/* Left side - Early Learning Targets */}
           <div className="info-left">
             <h3>Early Learning Targets</h3>
             <p>
@@ -69,7 +62,6 @@ const Kindergarten = () => {
             </p>
           </div>
 
-          {/* Right side - Dropdowns for Curriculum */}
           <div className="info-right">
             <div className="dropdown">
               <button
@@ -90,7 +82,6 @@ const Kindergarten = () => {
               )}
             </div>
 
-            {/* Additional Dropdowns */}
             <div className="dropdown">
               <button
                 className="dropdown-btn"
@@ -130,9 +121,7 @@ const Kindergarten = () => {
           </div>
         </div>
 
-        {/* New section below Early Years Foundation Curriculum */}
         <div className="additional-section">
-          {/* Left side - Headers and Points */}
           <div className="additional-left">
             <h3>Early Years Foundation Curriculum (Age 3-5)</h3>
             <h4>Prime Areas of Learning:</h4>
@@ -165,7 +154,6 @@ const Kindergarten = () => {
 
           </div>
 
-          {/* Right side - Image */}
           <div className="additional-right">
             <img src="/images/kinder5.jpg" alt="Additional Image" />
           </div>

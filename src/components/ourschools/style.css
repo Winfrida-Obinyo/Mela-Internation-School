@@ -1,7 +1,6 @@
-/* style.css */
 
 .extracurricular-container {
-    text-align: center; /* Center align the content */
+    text-align: center;
     font-size: x-large;
     color: red;
   }
@@ -12,8 +11,8 @@
   
   .extracurricular {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns */
-    gap: 20px; /* Gap between items */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
   }
   
   .extracurricular-item {

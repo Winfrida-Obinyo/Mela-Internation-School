@@ -1,6 +1,3 @@
-/* FeeStructure.css */
-
-/* Overall container styling */
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -9,7 +6,7 @@
   }
   
   /* Heading styles */
-  h1 {
+  /* h1 {
     font-size: 28px;
     margin-bottom: 20px;
     color: darkred;
@@ -21,9 +18,8 @@
     margin-top: 30px;
     margin-bottom: 10px;
     color: navy;
-  }
+  } */
   
-  /* Table styles */
   .fee-table {
     width: 100%;
     border-collapse: collapse;
@@ -42,7 +38,6 @@
     background-color: #f2f2f2;
   }
   
-  /* Note section styles */
   .note {
     font-size: 14px;
     color: #666;
