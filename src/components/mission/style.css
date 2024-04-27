@@ -1,53 +1,60 @@
 .mission-container {
-    padding: 20px; 
-    background-color:white;
-  }
-  
-  .mission-item {
-    margin-bottom: 20px; 
-  }
-  
-  .mission-item h2 {
-    color: red; 
+  padding: 20px; 
+  background-color: white;
+}
 
-  }
-  
-  .mission-item p {
-    color: black; 
-  }
-  .mission-vision-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .mission,
-  .vision,
-  .covalues {
-    padding:20px 20px;
-    color: darkgreen; 
-    font-weight: bold;
-    text-align: center;
-  }
-  .mission-vision-container {
+.mission-item {
+  margin-bottom: 20px; 
+}
+
+.mission-item h2 {
+  color: red; 
+}
+
+.mission-item p {
+  color: black; 
+}
+
+.mission-vision-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   margin-top: 20px;
-  border: 2px solid darkgreen; 
-  border-radius: 10px; 
 }
 
 .mission,
 .vision,
-.covalues {
-  padding: 30px 30px;
-  color: darkgreen; 
+.core-values {
+  font-size: 24px;
   font-weight: bold;
+  display: flex;
+  align-items: center;
   text-align: center;
-  
 }
+
+.mission,
+.vision,
+.core-values {
+  padding: 20px;
+  color: darkgreen; 
+  border: 2px solid darkgreen; 
+  border-radius: 10px;
+  width: 30%; 
+  position: relative; 
+}
+
+
+
+@media (max-width: 768px) {
+  .mission,
+  .vision,
+  .core-values {
+    width: 100%; 
+    margin-bottom: 20px; 
+  }
+}
+
+
 
   
   

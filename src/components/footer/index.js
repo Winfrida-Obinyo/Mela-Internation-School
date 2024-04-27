@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
 import './style.css';
 
 const Footer = () => {
@@ -9,15 +8,12 @@ const Footer = () => {
         <h3>Contact Information</h3>
         <ul className="contact-list">
           <li>
-            <FaMapMarkerAlt className="icon" />
             Address: [Your School Address]
           </li>
           <li>
-            <FaPhone className="icon" />
-            Phone: [Your School Phone Number]
+            Phone: 0783286978
           </li>
           <li>
-            <FaEnvelope className="icon" />
             Email: [Your School Email]
           </li>
         </ul>
@@ -68,10 +64,10 @@ const Footer = () => {
           <li>Parents Handbook</li>
         </ul>
       </div>
-
     </footer>
   );
 };
 
 export default Footer;
+
 

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import './style.css'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -53,7 +52,8 @@ const Navbar = () => {
             <a href="#home" className="nav-link">Home</a>
           </li>
           <li className="nav-item">
-            <a href="#"
+            <a
+              href="#"
               className="nav-link"
               onClick={() => toggleDropdown('schools')}
             >
@@ -61,13 +61,16 @@ const Navbar = () => {
             </a>
             {schoolsDropdownOpen && (
               <ul className="dropdown-menu">
-                <li><a href="#primary">Bitish Curriculum</a></li>
+                <li><a href="#primary">British Curriculum</a></li>
                 <li><a href="#middle">Kenyan CBC Curriculum</a></li>
+                <li><a href="#middle">East African Curriculum</a></li>
+
               </ul>
             )}
           </li>
           <li className="nav-item">
-            <a href="#"
+            <a
+              href="#"
               className="nav-link"
               onClick={() => toggleDropdown('about')}
             >
@@ -75,13 +78,17 @@ const Navbar = () => {
             </a>
             {aboutDropdownOpen && (
               <ul className="dropdown-menu">
-                <li><a href="#history">History</a></li>
-                <li><a href="#mission">Mission & Vision</a></li>
+                <li><a href="#mission">Mission</a></li>
+                <li><a href="#vision">Vision</a></li>
+                <li><a href="#core values">Core Values</a></li>
+
+
               </ul>
             )}
           </li>
           <li className="nav-item">
-            <a href="#"
+            <a
+              href="#"
               className="nav-link"
               onClick={() => toggleDropdown('academic')}
             >
@@ -89,15 +96,17 @@ const Navbar = () => {
             </a>
             {academicDropdownOpen && (
               <ul className="dropdown-menu">
-                <li><a href="#curriculum">Fee Structure</a></li>
+                <li><a href="#kindergarten">Kindergarten</a></li>
                 <li><a href="#facilities">Preparatory</a></li>
-                <li><a href="#Junior High school">Preparatory</a></li>
-                <li><a href="#Academic Support">Academic Support</a></li>
+                <li><a href="#junior-high">Junior High School</a></li>
+                <li><a href="#senior-high">Senior High School</a></li>
+
               </ul>
             )}
           </li>
           <li className="nav-item">
-            <a href="#"
+            <a
+              href="#"
               className="nav-link"
               onClick={() => toggleDropdown('schoolLife')}
             >
@@ -105,11 +114,9 @@ const Navbar = () => {
             </a>
             {schoolLifeDropdownOpen && (
               <ul className="dropdown-menu">
-                <li><a href="#clubs">Extarcurricular Activities</a></li>
-                <li><a href="#TimeTables">TimeTables</a></li>
+                <li><a href="#clubs">Extracurricular Activities</a></li>
+                <li><a href="#timetables">Time Tables</a></li>
                 <li><a href="#events">Events</a></li>
-
-
               </ul>
             )}
           </li>
@@ -117,15 +124,22 @@ const Navbar = () => {
             <a href="#news" className="nav-link">News</a>
           </li>
         </ul>
+        <a href="#enroll" className="enroll-button">Enroll Now</a>
+
+
+
 
         <div className="search-icon">
           <i className="fas fa-search"></i>
         </div>
+        <div className="admin-signin-button">
+          <a href="#admin" className="admin-button">Admin SignIn</a>
+        </div>
 
-        <a href="#enroll" className="enroll-button">Enroll Now</a>
       </div>
     </nav>
   );
 };
 
 export default Navbar;
+

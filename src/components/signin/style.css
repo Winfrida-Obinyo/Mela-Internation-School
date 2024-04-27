@@ -54,4 +54,17 @@
   button:hover {
     background-color: lawngreen;
   }
-  
+.trouble-logging-in {
+  margin-top: 20px; 
+  text-align: right; 
+  font-size: 14px; 
+}
+
+.trouble-logging-in a {
+  color: red; 
+  text-decoration: none; 
+}
+
+.trouble-logging-in a:hover {
+  text-decoration: underline; 
+}

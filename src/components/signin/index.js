@@ -57,10 +57,17 @@ const SigninPage = () => {
         </div>
 
         <button type="submit">Sign In</button>
+
+        {/* "Having trouble logging in?" note */}
+        <div className="trouble-logging-in">
+          <p>Having trouble logging in?</p>
+          <p>Reset your password <a href="/password-reset">here</a>.</p>
+        </div>
       </form>
     </div>
   );
 };
 
 export default SigninPage;
+
 
