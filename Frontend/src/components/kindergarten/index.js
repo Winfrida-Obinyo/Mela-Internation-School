@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './style.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
 const Kindergarten = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);

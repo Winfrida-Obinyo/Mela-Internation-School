@@ -96,10 +96,10 @@ const Navbar = () => {
             </a>
             {academicDropdownOpen && (
               <ul className="dropdown-menu">
-                <li><a href="#kindergarten">Kindergarten</a></li>
-                <li><a href="#facilities">Preparatory</a></li>
-                <li><a href="#junior-high">Junior High School</a></li>
-                <li><a href="#senior-high">Senior High School</a></li>
+                <li><a href="/kindergarten">Kindergarten</a></li>
+                <li><a href="/preparatory">Preparatory</a></li>
+                <li><a href="/junior">Junior High School</a></li>
+                <li><a href="/senior">Senior High School</a></li>
 
               </ul>
             )}
@@ -124,7 +124,7 @@ const Navbar = () => {
             <a href="#news" className="nav-link">News</a>
           </li>
         </ul>
-        <a href="#enroll" className="enroll-button">Enroll Now</a>
+        <a href="/enrollment" className="enroll-button">Enroll Now</a>
 
 
 
@@ -133,7 +133,7 @@ const Navbar = () => {
           <i className="fas fa-search"></i>
         </div>
         <div className="admin-signin-button">
-          <a href="#admin" className="admin-button">Admin SignIn</a>
+          <a href="/signin" className="admin-button">Admin SignIn</a>
         </div>
 
       </div>

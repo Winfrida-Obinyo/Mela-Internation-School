@@ -2,15 +2,16 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'; 
 import './style.css'; 
+import axios from 'axios';
 
 const EnrollmentForm = () => {
   const [formData, setFormData] = useState({
-    fullname: '',
+    full_name: '',
     email: '',
     phone: '',
     program: '',
     message: '',
-    enrollmentDate: null 
+    enrollment_date: null // New state for the enrollment date
   });
 
   const handleInputChange = (e) => {
@@ -19,33 +20,44 @@ const EnrollmentForm = () => {
   };
 
   const handleDateChange = (date) => {
-    setFormData({ ...formData, enrollmentDate: date });
+    setFormData({ ...formData, enrollment_date: date.toISOString().split('T')[0], }); // Format the date
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    // Handle form submission here
+    try {
+      const response = await axios.post('http://localhost:5000/api/enrollment', formData);
+      console.log(response.data);
+    // Reset form after submission
     setFormData({
-      fullname: '',
+      full_name: '',
       email: '',
       phone: '',
       program: '',
       message: '',
-      enrollmentDate: null
+      enrollment_date: ''
     });
+  } 
+  
+  catch (error) 
+  {
+    console.error(error);
+  }
   };
+
 
   return (
     <div>
       <h2>Enroll Now</h2>
       <p>Fill out the form below to begin your enrollment process:</p>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="fullname">Full Name:</label>
+        <label htmlFor="full_name">Full Name:</label>
         <input
           type="text"
-          id="fullname"
-          name="fullname"
-          value={formData.fullname}
+          id="full_name"
+          name="full_name"
+          value={formData.full_name}
           onChange={handleInputChange}
           required
         /><br /><br />
@@ -85,10 +97,10 @@ const EnrollmentForm = () => {
           <option value="Other">Other</option>
         </select><br /><br />
 
-        <label htmlFor="enrollmentDate">Preferred Enrollment Date:</label>
+        <label htmlFor="enrollment_date">Preferred Enrollment Date:</label>
         <DatePicker
-          id="enrollmentDate"
-          selected={formData.enrollmentDate}
+          id="enrollment_date"
+          selected={formData.enrollment_date ? new Date(formData.enrollment_date) : null}
           onChange={handleDateChange}
           dateFormat="yyyy-MM-dd"
           isClearable

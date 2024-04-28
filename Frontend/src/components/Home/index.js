@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './style.css'; 
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -59,9 +60,11 @@ const HomePage = () => {
           <div className="banner-content">
             <h1>{captions[currentImageIndex].title}</h1>
             <p>{captions[currentImageIndex].description}</p>
+            <Link to="/admission">
             <button className="apply-button" onClick={handleApplyForAdmission}>
               Apply for Admission
             </button>
+            </Link>
           </div>
         </div>
         <div className="navigation-dots">

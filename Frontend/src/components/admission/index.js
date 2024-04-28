@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import './style.css'; 
+import axios from 'axios';
 
 const AdmissionForm = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phoneNumber: '',
-    dateOfBirth: '',
-    gradeLevel: '',
-    formerSchool: '',
-    startMonth: '',
+    first_name: '',
+    last_name: '',
+    email_address: '',
+    phone_number: '',
+    date_of_birth: '',
+    class_level: '',
+    former_school: '',
+    start_month: '',
     location: '',
-    comment: ''
+    additional_comments: ''
   });
 
   const handleChange = (e) => {
@@ -24,116 +25,127 @@ const AdmissionForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData); 
+    // Handle form submission here (e.g., send data to backend, show success message)
+    try {
+      const response = await axios.post('http://localhost:5000/api/user', formData);
+      console.log(response.data);
+       // Clear form fields after submission (optional)
     setFormData({
-      firstName: '',
-      lastName: '',
-      email: '',
-      phoneNumber: '',
-      dateOfBirth: '',
-      gradeLevel: '',
-      formerSchool: '',
-      startMonth: '',
+      first_name: '',
+      last_name: '',
+      email_address: '',
+      phone_number: '',
+      date_of_birth: '',
+      class_level: '',
+      former_school: '',
+      start_month: '',
       location: '',
-      comment: ''
+      additional_comments: ''
     });
-  };
 
+    } 
+    
+    catch (error) 
+    {
+      console.error(error);
+    }
+  };
+    // console.log(UserData); // For demonstration, log form data to console
   return (
     <Container className="admission-form-container">
       <h2 className="form-title">ADMISSION FORM</h2>
       <Form onSubmit={handleSubmit}>
-        <Form.Group controlId="firstName" className="form-group">
+        <Form.Group controlId="first_name" className="form-group">
           <Form.Label className="form-label">First Name</Form.Label>
           <Form.Control
             type="text"
-            name="firstName"
-            value={formData.firstName}
+            name="first_name"
+            value={formData.first_name}
             onChange={handleChange}
             placeholder="Enter your first name"
             required
           />
         </Form.Group>
 
-        <Form.Group controlId="lastName" className="form-group">
+        <Form.Group controlId="last_name" className="form-group">
           <Form.Label className="form-label">Last Name</Form.Label>
           <Form.Control
             type="text"
-            name="lastName"
-            value={formData.lastName}
+            name="last_name"
+            value={formData.last_name}
             onChange={handleChange}
             placeholder="Enter your last name"
             required
           />
         </Form.Group>
 
-        <Form.Group controlId="email" className="form-group">
+        <Form.Group controlId="email_address" className="form-group">
           <Form.Label className="form-label">Email Address</Form.Label>
           <Form.Control
-            type="email"
-            name="email"
-            value={formData.email}
+            type="email_address"
+            name="email_address"
+            value={formData.email_address}
             onChange={handleChange}
             placeholder="Enter your email"
             required
           />
         </Form.Group>
 
-        <Form.Group controlId="phoneNumber" className="form-group">
+        <Form.Group controlId="phone_number" className="form-group">
           <Form.Label className="form-label">Phone Number</Form.Label>
           <Form.Control
             type="tel"
-            name="phoneNumber"
-            value={formData.phoneNumber}
+            name="phone_number"
+            value={formData.phone_number}
             onChange={handleChange}
             placeholder="Enter your phone number"
             required
           />
         </Form.Group>
 
-        <Form.Group controlId="dateOfBirth" className="form-group">
+        <Form.Group controlId="date_of_birth" className="form-group">
           <Form.Label className="form-label">Date of Birth</Form.Label>
           <Form.Control
             type="date"
-            name="dateOfBirth"
-            value={formData.dateOfBirth}
+            name="date_of_birth"
+            value={formData.date_of_birth}
             onChange={handleChange}
             required
           />
         </Form.Group>
 
-        <Form.Group controlId="gradeLevel" className="form-group">
+        <Form.Group controlId="class_level" className="form-group">
           <Form.Label className="form-label">Grade Level/Class</Form.Label>
           <Form.Control
             type="text"
-            name="gradeLevel"
-            value={formData.gradeLevel}
+            name="class_level"
+            value={formData.class_level}
             onChange={handleChange}
             placeholder="Enter grade level/class"
             required
           />
         </Form.Group>
 
-        <Form.Group controlId="formerSchool" className="form-group">
+        <Form.Group controlId="former_school" className="form-group">
           <Form.Label className="form-label">Former School</Form.Label>
           <Form.Control
             type="text"
-            name="formerSchool"
-            value={formData.formerSchool}
+            name="former_school"
+            value={formData.former_school}
             onChange={handleChange}
             placeholder="Enter former school name"
             required
           />
         </Form.Group>
 
-        <Form.Group controlId="startMonth" className="form-group">
+        <Form.Group controlId="start_month" className="form-group">
           <Form.Label className="form-label">Start Month</Form.Label>
           <Form.Control
             as="select"
-            name="startMonth"
-            value={formData.startMonth}
+            name="start_month"
+            value={formData.start_month}
             onChange={handleChange}
             required
           >
@@ -156,13 +168,13 @@ const AdmissionForm = () => {
           />
         </Form.Group>
 
-        <Form.Group controlId="comment" className="form-group">
+        <Form.Group controlId="additional_comments" className="form-group">
           <Form.Label className="form-label">Additional Comments</Form.Label>
           <Form.Control
             as="textarea"
             rows={3}
-            name="comment"
-            value={formData.comment}
+            name="additional_comments"
+            value={formData.additional_comments}
             onChange={handleChange}
             placeholder="Enter any additional comments"
           />

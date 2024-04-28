@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 import './style.css'; // Import your CSS file for styling
 
+
 const SigninPage = () => {
   const [formData, setFormData] = useState({
     email: '',
@@ -60,8 +61,8 @@ const SigninPage = () => {
 
         {/* "Having trouble logging in?" note */}
         <div className="trouble-logging-in">
-          <p>Having trouble logging in?</p>
-          <p>Reset your password <a href="/password-reset">here</a>.</p>
+          <p><a href="/signup">Having trouble logging in?</a></p>
+          {/* <p>Reset your password <a href="/password-reset">Having trouble logging in?</a>.</p> */}
         </div>
       </form>
     </div>

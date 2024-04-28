@@ -61,10 +61,11 @@
 }
 
 .trouble-logging-in a {
-  color: red; 
+  color: rgb(46, 89, 145); 
   text-decoration: none; 
 }
 
 .trouble-logging-in a:hover {
-  text-decoration: underline; 
+  text-decoration: underline;
+  color: rgb(22, 43, 2); 
 }

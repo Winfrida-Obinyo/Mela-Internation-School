@@ -8,16 +8,16 @@ import OurSchools from "./components/ourschools";
 import Offer from "./components/offer";
 import Future from "./components/future";
 import Footer from "./components/footer";
-import AdmissionForm from "./components/admission";
-import Kindergarten from "./components/kindergarten";
-import PreparatorySchool from "./components/preparatory";
-import JuniorHighSchool from "./components/juniorhighschool";
-import SeniorHighSchool from "./components/seniorhighschool";
-import FeeStructure from "./components/feestructure";
-import EnrollmentForm from "./components/enrollnow";
-import SignUpAdmin from "./components/signup";
-import SigninPage from "./components/signin";
-import DisplayApplicants from "./components/display";
+// import AdmissionForm from "./components/admission";
+// import Kindergarten from "./components/kindergarten";
+// import PreparatorySchool from "./components/preparatory";
+// import JuniorHighSchool from "./components/juniorhighschool";
+// import SeniorHighSchool from "./components/seniorhighschool";
+// import FeeStructure from "./components/feestructure";
+// import EnrollmentForm from "./components/enrollnow";
+// import SignUpAdmin from "./components/signup";
+// import SigninPage from "./components/signin";
+// import DisplayApplicants from "./components/display";
 
 function App(){
   return (
@@ -31,7 +31,7 @@ function App(){
      <Offer/>
      <Future/>
      <Footer/>
-     <AdmissionForm/>
+     {/* <AdmissionForm/>
      <Kindergarten/>
      <PreparatorySchool/>
      <JuniorHighSchool/>
@@ -40,7 +40,7 @@ function App(){
      <EnrollmentForm/>
      <SignUpAdmin/>
      <SigninPage/>
-     <DisplayApplicants/>
+     <DisplayApplicants/> */}
 
      
 

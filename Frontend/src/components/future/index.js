@@ -1,5 +1,7 @@
 import React from 'react';
 import './style.css'; 
+import { Link } from 'react-router-dom';
+
 const Future = () => {
   return (
     <div className="future-container">
@@ -14,8 +16,8 @@ const Future = () => {
           Join us on this journey towards success!
         </p>
         <div className="future-buttons">
-          <button className="future-button">FEE STRUCTURE</button>
-          <button className="future-button">ENROLL NOW</button>
+          <Link to="/feestructure"><button className="future-button">FEE STRUCTURE</button></Link>
+          <Link to="/enrollment"><button className="future-button">ENROLL NOW</button></Link>
         </div>
       </div>
     </div>
