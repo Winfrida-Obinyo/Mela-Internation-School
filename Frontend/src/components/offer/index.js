@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 import { FaBabyCarriage, FaGraduationCap, FaUserGraduate, FaUserTie } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+
 
 const Offer = () => {
   return (
