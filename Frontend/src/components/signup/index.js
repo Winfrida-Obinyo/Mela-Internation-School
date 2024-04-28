@@ -2,14 +2,15 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faPhone, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import './style.css';
+import axios from 'axios';
 
 const SignUpAdmin = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    phoneNumber: '',
+    first_name: '', 
+    last_name: '',
+    phone_number: '', 
     email: '',
-    password: '',
+    password:'',
     confirmPassword: ''
   });
 
@@ -24,9 +25,28 @@ const SignUpAdmin = () => {
     setShowPassword(!showPassword);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData); 
+    // Handle form submission 
+    try {
+      const response =await axios.post('http://localhost:5000/api/signup', formData);
+      console.log(response.data);
+      // clear fields after submission
+    setFormData({
+      first_name: '', 
+      last_name: '',
+      phone_number: '', 
+      email: '',
+      password:'',
+      confirmPassword: '' 
+    });
+
+    }
+    catch(error)
+    {
+      console.error(error);
+    }
+     
   };
 
   return (
@@ -34,13 +54,13 @@ const SignUpAdmin = () => {
       <h2>Admin Sign Up</h2>
       <form className="signup-form" onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="firstName">First Name:</label>
+          <label htmlFor="first_name">First Name:</label>
           <div className="input-container">
             <input
               type="text"
-              id="firstName"
-              name="firstName"
-              value={formData.firstName}
+              id="first_name"
+              name="first_name"
+              value={formData.first_name}
               onChange={handleInputChange}
               required
             />
@@ -49,13 +69,13 @@ const SignUpAdmin = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="lastName">Last Name:</label>
+          <label htmlFor="last_name">Last Name:</label>
           <div className="input-container">
             <input
               type="text"
-              id="lastName"
-              name="lastName"
-              value={formData.lastName}
+              id="last_name"
+              name="last_name"
+              value={formData.last_name}
               onChange={handleInputChange}
               required
             />
@@ -64,13 +84,13 @@ const SignUpAdmin = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="phoneNumber">Phone Number:</label>
+          <label htmlFor="phone_number">Phone Number:</label>
           <div className="input-container">
             <input
               type="tel"
-              id="phoneNumber"
-              name="phoneNumber"
-              value={formData.phoneNumber}
+              id="phone_number"
+              name="phone_number"
+              value={formData.phone_number}
               onChange={handleInputChange}
               required
             />

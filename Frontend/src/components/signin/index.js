@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 import './style.css'; // Import your CSS file for styling
+import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 
-const SigninPage = () => {
+const SigninPage = ({ history }) => {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -15,9 +17,19 @@ const SigninPage = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData); // Replace with your form submission logic
+    try {
+      const response = await axios.post('http://localhost:5000/api/login', formData);
+      const token = response.data.token;
+      localStorage.setItem('token', token);
+      // Redirect to the ShowData page
+      history.push('/adminpage');
+    }
+    catch (error) {
+      // Handle login error
+      console.error('Login failed:', error);
+    }
     // Add form submission logic here (e.g., sending data to backend)
     // Reset form fields if needed
     setFormData({ email: '', password: '' });
