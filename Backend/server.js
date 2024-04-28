@@ -2,7 +2,8 @@ const express = require('express');
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
 const app = express();
 
@@ -25,6 +26,18 @@ db.connect((err) => {
     console.log('MySQL Connected...');
   });
 
+
+  // API endpoint to fetch data from MySQL database
+app.get('/api/data', (req, res) => {
+  const query = 'SELECT * FROM admission';
+  db.query(query, (err, result) => {
+    if (err) {
+      throw err;
+    }
+    res.json(result); // Send the fetched data as JSON response
+  });
+});
+
 // User authentication for adminpage
 
 app.post('/api/signup', (req, res) => {
@@ -37,7 +50,7 @@ app.post('/api/signup', (req, res) => {
       }      
 
       // Insert user into the database
-      const query = 'INSERT INTO Users (first_name, last_name, phone_number, email, password) VALUES (?, ?, ?, ?, ?)';
+      const query = 'INSERT INTO users (first_name, last_name, phone_number, email, password) VALUES (?, ?, ?, ?, ?)';
       db.query(query, [first_name, last_name, phone_number, email, hashedPassword], (error, results) => {
           if (error) {
               return res.status(500).json({ error: 'Failed to create user' });
@@ -51,39 +64,63 @@ app.post('/api/signup', (req, res) => {
 
 // user login route
 
-app.post('/api/login', (req, res) => {
-  const { email, password } = req.body;
-
-  // Fetch user from the database
-  const query = 'SELECT * FROM users WHERE email = ?';
-  db.query(query, [email], (error, results) => {
-      if (error) {
-          console.log(error);
-          return res.status(500).json({ error: 'Failed to authenticate' });
-      }
-
-      if (results.length === 0) {
-          return res.status(401).json({ error: 'Invalid credentials' });
-      }
-
-      const user = results[0];
-
-      // Compare hashed password
-      bcrypt.compare(password, user.password, (err, result) => {
-          if (err || !result) {
-              return res.status(401).json({ error: 'Invalid credentials' });
-          }
-
-          console.log('Login successful');
-
-          // You can generate a JWT token and send it to the client here
-          return res.status(200).json({ message: 'Login successful' });
-
-          // Generate JWT token and send it to the client
-          // Here you can use a JWT library like jsonwebtoken
+app.post('/api/login', async (req, res) => {
+  const { email, password, } = req.body;
+  // Function to query the db for user by email
+  function getUserByEmail(email) {
+    return new Promise((resolve, reject) => {
+      db.query('SELECT * FROM users WHERE email = ?', [email], (error, results) => {
+        if (error) {
+          return reject(error);
+        }
+        if (results.length === 0) {
+          return resolve(null); // No user found with given email
+        }
+        resolve(results[0]); // retun the first user found with the given email
       });
-  });
+    });
+  }
+  try{
+    //Find user by email
+    const user =await getUserByEmail(email);
+
+    if (!user) {
+      return res.status(401).json({error: 'Invalid Credentials'});
+    }
+    //Compare passwords
+    const passwordMatch = await bcrypt.compare(password, user.password);
+
+    if(!passwordMatch) {
+      return res.status(401).json({error: 'Invalid Credentials'});
+    }
+    
+
+    // Passwords match, generate JWT token
+    // Function to generate JWT token
+function generateToken(user) {
+  // Define token payload
+  const payload = {
+    userId: user.id,
+    email: user.email,
+    // Set token expiration to 1 hour (3600 seconds)
+    expiresIn: '1h'
+  };
+  // Sign the token with a secret key and return
+  return jwt.sign(payload, 'secret_key');
+}
+    const token = generateToken({ userId: user.id, email: user.email });
+
+    // Send token to the client
+    res.json({ token });
+  } catch (error){
+    console.error('Login failed:', error);
+    res.status(500).json({error: 'internal server error'});
+    console.log('internal server error');
+  }
+  
+      
 });
+
 
 
 

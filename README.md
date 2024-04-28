@@ -68,3 +68,23 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## npm dependancies
+
+### Backend
+npm install express mysql bcrypt
+npm install csurf
+npm install cookie-parser
+npm install express
+npm install jsonwebtoken
+npm install body-parser
+npm install cors
+
+
+
+### Frontend
+npm install react-csv
+npm install @react-pdf/renderer
+npm install react-export-excel
+npm install express
+

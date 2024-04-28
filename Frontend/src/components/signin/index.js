@@ -3,13 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 import './style.css'; // Import your CSS file for styling
 import axios from 'axios';
-import { useHistory } from 'react-router-dom';
 
 
-const SigninPage = ({ history }) => {
+
+const SigninPage = () => {
   const [formData, setFormData] = useState({
     email: '',
-    password: ''
+    password: ''    
   });
 
   const handleInputChange = (e) => {
@@ -21,25 +21,45 @@ const SigninPage = ({ history }) => {
     e.preventDefault();
     try {
       const response = await axios.post('http://localhost:5000/api/login', formData);
-      const token = response.data.token;
-      localStorage.setItem('token', token);
+      console.log(response.data.token); //log the token
+
+      // Write success message to console
+    console.log('Sign-in successful');
+
+      // Store token in local storage or session storage
+    localStorage.setItem('token', response.data.token);
+
+      // Check if authentication is successful (you should customize this based on your server response)
+      // if (response.data.success) {
+      //   window.location.href = '/adminpage';
+      // } else{
+      //   console.log('Invalid Credentials');
+      // }
+      // const token = response.data.token;
+      // localStorage.setItem('token', token);
       // Redirect to the ShowData page
-      history.push('/adminpage');
+      // history.push('/adminpage');
+      window.location.href = '/adminpage';
     }
     catch (error) {
       // Handle login error
-      console.error('Login failed:', error);
+      console.error('Login failed', error);
     }
     // Add form submission logic here (e.g., sending data to backend)
     // Reset form fields if needed
-    setFormData({ email: '', password: '' });
+     setFormData({ 
+      email: '', 
+      password: '' 
+    });
+
+    
   };
 
   return (
     <div className="signin-container">
       <h2>Sign In</h2>
       <form className="signin-form" onSubmit={handleSubmit}>
-        <div className="form-group">
+          <div className="form-group">
           <label htmlFor="email">Email:</label>
           <div className="input-container">
             <input
