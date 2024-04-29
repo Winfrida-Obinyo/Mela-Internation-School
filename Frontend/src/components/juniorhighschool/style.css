@@ -1,0 +1,111 @@
+.junior-high-school-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: navy; 
+  }
+  
+  .image-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; 
+  }
+  
+  .image-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  within image items */
+  .image-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .image-item:hover img {
+    transform: scale(1.1);
+  }
+  
+  .info-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  .info-left,
+  .info-right {
+    width: 48%;
+  }
+  
+  .dropdown-btn {
+    background-color: darkblue; 
+    color: white;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-bottom: 5px solid white;
+  }
+  
+  .dropdown-content {
+    background-color: #f9f9f9;
+    padding: 20px; 
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 8px 8px; 
+    width: 90%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .dropdown-content p {
+    margin: 0;
+  }
+  
+  .dropdown-btn.active {
+    background-color: white;
+    color: darkblue; 
+  }
+  
+  .additional-section {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+  }
+  
+  .additional-left {
+    width: 60%;
+  }
+  
+  .additional-left h3,
+  .additional-left h4 {
+    color: navy; 
+    font-size: 1.5rem; 
+    margin-bottom: 10px;
+  }
+  
+  .additional-right {
+    width: 35%;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start; 
+  }
+  
+  .additional-right img {
+    width: 150%;
+    height: auto;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  
+  
+  

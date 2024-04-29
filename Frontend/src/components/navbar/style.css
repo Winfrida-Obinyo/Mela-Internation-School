@@ -1,0 +1,108 @@
+.navbar {
+  background-color: #ffffff;
+  padding: 10px; /* Adjust overall padding */
+  height: 85px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo img {
+  max-width: 160px;
+  height: auto;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 15px;
+  position: relative;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333333;
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: red;
+}
+
+.search-icon {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.enroll-button {
+  padding: 8px 16px;
+  background-color: green;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.enroll-button:hover {
+  background-color: darkgreen;
+}
+
+.admin-button {
+  padding: 8px 16px;
+  background-color: green; 
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.admin-button:hover {
+  background-color: darkgreen; 
+}
+
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: none;
+}
+
+.nav-item:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  color: #333333;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+
+.dropdown-menu a:hover {
+  color: darkred;
+}
+
+
+
+
+
+  

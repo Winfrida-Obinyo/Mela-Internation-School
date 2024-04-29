@@ -1,0 +1,75 @@
+
+.admission-form-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 60px;
+  background-color: white;
+  border-radius: 20px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-weight: normal; 
+}
+
+.form-label.required::after {
+  content: ' *'; 
+  color: red; 
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px; 
+  border-radius: 8px; 
+  border: 1px solid #ced4da;
+}
+
+.form-control:placeholder-shown {
+  color: red; 
+}
+
+.form-placeholder {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.submit-button {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 50px; 
+  background-color: darkgreen;
+  padding: 10px;
+  color: white;
+  margin-left: 250px;
+}
+
+
+textarea.form-control {
+  resize: vertical; 
+}
+
+select.form-control {
+  appearance: none; 
+}
+
+
+.form-group .form-control::placeholder {
+  color: #6c757d;
+  font-size: 14px;
+  border-radius: 10px; 
+}
+
+
+
+
+
+  
