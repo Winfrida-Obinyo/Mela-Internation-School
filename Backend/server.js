@@ -13,7 +13,7 @@ app.use(cors());
 // Create connection
 const db = mysql.createConnection({
   host: 'localhost',
-  user: 'user1', // Your MySQL username
+  user: 'root', // Your MySQL username
   password: 'root123', // Your MySQL password
   database: 'meladb' // Your MySQL database name
 });
@@ -127,7 +127,7 @@ function generateToken(user) {
 // Create user data
 app.post('/api/user', (req, res) => {
     const { first_name, last_name, email_address, phone_number, date_of_birth, class_level, former_school, start_month, location, additional_comments } = req.body;
-    const INSERT_USER_QUERY = `INSERT INTO Admission (first_name, last_name, email_address, phone_number, date_of_birth, class_level, former_school, start_month, location, additional_comments) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+    const INSERT_USER_QUERY = `INSERT INTO admission (first_name, last_name, email_address, phone_number, date_of_birth, class_level, former_school, start_month, location, additional_comments) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
     db.query(INSERT_USER_QUERY, [first_name, last_name, email_address, phone_number, date_of_birth, class_level, former_school, start_month, location, additional_comments], (err, result) => {
       if (err) {
         console.log(err);
