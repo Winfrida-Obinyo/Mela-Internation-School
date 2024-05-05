@@ -17,6 +17,9 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import DisplayAdmissionData from './components/display/admissiondata';
+import DisplayEnrollmentData from './components/display/enrollmentdata';
+import Layout from './components/Layout/Layout';
 
 
 const router = createBrowserRouter([
@@ -74,13 +77,26 @@ const router = createBrowserRouter([
     path: "/adminpage",
     element: <DisplayApplicants />,
   },
+
+  {
+    path: "/admission-data",
+    element: <DisplayAdmissionData />,
+  },
   
+  {
+    path: "/enrollment-data",
+    element: <DisplayEnrollmentData />,
+  },
+
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    {/* <RouterProvider router={router} /> */}
+      <Layout>
+        <RouterProvider router={router} />
+      </Layout>
     {/* <App /> */}
   </React.StrictMode>
 );

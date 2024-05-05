@@ -1,5 +1,6 @@
 .navbar {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
+  background: linear-gradient(180deg, #28D91D 21%, #9DE6A1 41%);
   padding: 10px; /* Adjust overall padding */
   height: 85px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -29,7 +30,7 @@
 
 .nav-link {
   text-decoration: none;
-  color: #333333;
+  color: rgb(240, 247, 242);
   transition: color 0.3s ease;
   font-weight: bold;
 }

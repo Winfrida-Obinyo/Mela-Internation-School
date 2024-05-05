@@ -3,6 +3,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'; 
 import './style.css'; 
 import axios from 'axios';
+import { Container } from 'react-bootstrap';
 
 const EnrollmentForm = () => {
   const [formData, setFormData] = useState({
@@ -48,7 +49,7 @@ const EnrollmentForm = () => {
 
 
   return (
-    <div>
+    <Container>
       <h2>Enroll Now</h2>
       <p>Fill out the form below to begin your enrollment process:</p>
       <form onSubmit={handleSubmit}>
@@ -123,7 +124,7 @@ const EnrollmentForm = () => {
           <button type="button" onClick={handleSubmit}>Reset</button>
         </div>
       </form>
-    </div>
+    </Container>
   );
 };
 
