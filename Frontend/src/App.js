@@ -41,6 +41,7 @@ function App(){
      <SignUpAdmin/>
      <SigninPage/>
      <DisplayApplicants/> */}
+     <EnrollForm/>
 
      
 

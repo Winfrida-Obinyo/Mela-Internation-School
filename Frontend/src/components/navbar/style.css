@@ -1,3 +1,4 @@
+/* Default styles */
 .navbar {
   /* background-color: #ffffff; */
   background: linear-gradient(180deg, #28D91D 21%, #9DE6A1 41%);
@@ -44,7 +45,8 @@
   cursor: pointer;
 }
 
-.enroll-button {
+.enroll-button,
+.admin-button {
   padding: 8px 16px;
   background-color: green;
   color: #ffffff;
@@ -55,25 +57,10 @@
   font-weight: bold;
 }
 
-.enroll-button:hover {
+.enroll-button:hover,
+.admin-button:hover {
   background-color: darkgreen;
 }
-
-.admin-button {
-  padding: 8px 16px;
-  background-color: green; 
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-weight: bold;
-}
-
-.admin-button:hover {
-  background-color: darkgreen; 
-}
-
 
 .dropdown-menu {
   position: absolute;
@@ -101,6 +88,106 @@
 .dropdown-menu a:hover {
   color: darkred;
 }
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    height: auto; /* Change height to auto for responsiveness */
+  }
+  
+  .navbar-logo img {
+    max-width: 120px; /* Adjust logo size for smaller screens */
+  }
+  
+  .nav-menu {
+    display: none; /* Hide menu items by default on smaller screens */
+  }
+  
+  .search-icon {
+    display: block; /* Display search icon on smaller screens */
+  }
+  
+  .enroll-button,
+  .admin-button {
+    display: none; /* Hide enroll and admin buttons on smaller screens */
+  }.display-applicants {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .applicants-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .applicants-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .applicants-list li {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .body {
+    background: linear-gradient(180deg, #28D91D 0%, #9DE6A1 0%);
+    align-items: center;
+  }
+  
+  .btn-container {
+    background: linear-gradient(180deg, #28D91D 0%, #9DE6A1 0%); 
+  }
+  
+  .button {
+    background-color: darkgreen;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin-top: 50px;
+    text-decoration: none;
+    text-align: center;
+    max-width: 160px;
+  }
+  
+  .bu
+  
+  .dropdown-menu {
+    position: static; /* Change dropdown menu position to static */
+    display: none; /* Hide dropdown menu by default on smaller screens */
+  }
+  
+  .nav-item:hover .dropdown-menu {
+    display: none; /* Hide dropdown menu on hover for smaller screens */
+  }
+}
+
 
 
 

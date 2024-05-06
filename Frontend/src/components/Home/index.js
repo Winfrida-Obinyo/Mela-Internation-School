@@ -8,7 +8,7 @@ const HomePage = () => {
     '/images/play.jpg',
     '/images/cbc2.jpg',
     '/images/cbc1.jpg',
-    '/images/studying.jpg'
+    '/images/students.jpg'
   ];
 
   const captions = [
