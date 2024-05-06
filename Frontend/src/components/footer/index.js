@@ -14,7 +14,7 @@ const Footer = () => {
             Phone: 0783286978
           </li>
           <li>
-            Email: [Your School Email]
+            Email: joeobote01@gmail.com
           </li>
         </ul>
       </div>

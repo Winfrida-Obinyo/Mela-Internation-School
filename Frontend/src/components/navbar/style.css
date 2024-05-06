@@ -1,3 +1,4 @@
+/* Default styles */
 .navbar {
   background-color: #ffffff;
   padding: 10px; /* Adjust overall padding */
@@ -43,7 +44,8 @@
   cursor: pointer;
 }
 
-.enroll-button {
+.enroll-button,
+.admin-button {
   padding: 8px 16px;
   background-color: green;
   color: #ffffff;
@@ -54,25 +56,10 @@
   font-weight: bold;
 }
 
-.enroll-button:hover {
+.enroll-button:hover,
+.admin-button:hover {
   background-color: darkgreen;
 }
-
-.admin-button {
-  padding: 8px 16px;
-  background-color: green; 
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-weight: bold;
-}
-
-.admin-button:hover {
-  background-color: darkgreen; 
-}
-
 
 .dropdown-menu {
   position: absolute;
@@ -100,6 +87,40 @@
 .dropdown-menu a:hover {
   color: darkred;
 }
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    height: auto; /* Change height to auto for responsiveness */
+  }
+  
+  .navbar-logo img {
+    max-width: 120px; /* Adjust logo size for smaller screens */
+  }
+  
+  .nav-menu {
+    display: none; /* Hide menu items by default on smaller screens */
+  }
+  
+  .search-icon {
+    display: block; /* Display search icon on smaller screens */
+  }
+  
+  .enroll-button,
+  .admin-button {
+    display: none; /* Hide enroll and admin buttons on smaller screens */
+  }
+  
+  .dropdown-menu {
+    position: static; /* Change dropdown menu position to static */
+    display: none; /* Hide dropdown menu by default on smaller screens */
+  }
+  
+  .nav-item:hover .dropdown-menu {
+    display: none; /* Hide dropdown menu on hover for smaller screens */
+  }
+}
+
 
 
 

@@ -94,7 +94,32 @@
   .apply-button:hover {
     background-color: #388e3c; 
   }
+ /* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .banner-content {
+    font-size: 1.5em;
+  }
+  
+  .apply-button {
+    font-size: 0.8em;
+  }
+}
+
+/* Media Query for even smaller screens */
+@media (max-width: 480px) {
+  .banner-content {
+    font-size: 1.2em;
+  }
+  
+  .apply-button {
+    font-size: 0.6em;
+  }
+}
+
  
+  
+  
+  
   
   
   

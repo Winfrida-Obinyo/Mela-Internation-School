@@ -8,6 +8,7 @@ import OurSchools from "./components/ourschools";
 import Offer from "./components/offer";
 import Future from "./components/future";
 import Footer from "./components/footer";
+import EnrollForm from "./components/enrolldisplay";
 // import AdmissionForm from "./components/admission";
 // import Kindergarten from "./components/kindergarten";
 // import PreparatorySchool from "./components/preparatory";
@@ -41,6 +42,7 @@ function App(){
      <SignUpAdmin/>
      <SigninPage/>
      <DisplayApplicants/> */}
+     <EnrollForm/>
 
      
 
