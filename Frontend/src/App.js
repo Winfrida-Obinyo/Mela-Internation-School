@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./components/navbar";
+// import Navbar from "./components/navbar";
 import HomePage from "./components/Home";
 import Mission from "./components/mission";
 import AboutUs from "./components/aboutus";
@@ -7,8 +7,7 @@ import ReasonsToChooseMela from "./components/choosemela";
 import OurSchools from "./components/ourschools";
 import Offer from "./components/offer";
 import Future from "./components/future";
-import Footer from "./components/footer";
-import EnrollForm from "./components/enrolldisplay";
+// import Footer from "./components/footer";
 // import AdmissionForm from "./components/admission";
 // import Kindergarten from "./components/kindergarten";
 // import PreparatorySchool from "./components/preparatory";
@@ -23,7 +22,7 @@ import EnrollForm from "./components/enrolldisplay";
 function App(){
   return (
     <div>
-     <Navbar/> 
+     {/* <Navbar/>  */}
      <HomePage/>
      <Mission/>
      <AboutUs/>
@@ -31,7 +30,7 @@ function App(){
      <OurSchools/>
      <Offer/>
      <Future/>
-     <Footer/>
+     {/* <Footer/> */}
      {/* <AdmissionForm/>
      <Kindergarten/>
      <PreparatorySchool/>
