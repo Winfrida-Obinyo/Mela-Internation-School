@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import './style.css'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown, faAngleUp, faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [schoolsDropdownOpen, setSchoolsDropdownOpen] = useState(false);
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [academicDropdownOpen, setAcademicDropdownOpen] = useState(false);
@@ -47,7 +48,8 @@ const Navbar = () => {
           <img src="/images/logo6.png" alt="School Logo" />
         </a>
 
-        <ul className="nav-menu">
+
+        <ul className={`nav-menu ${mobileMenuOpen ? 'mobile-menu-open' : ''}`}>
           <li className="nav-item">
             <a href="/" className="nav-link">Home</a>
           </li>
@@ -74,7 +76,7 @@ const Navbar = () => {
               className="nav-link"
               onClick={() => toggleDropdown('about')}
             >
-              About Our School {renderDropdownIcon('about')}
+              About{renderDropdownIcon('about')}
             </a>
             {aboutDropdownOpen && (
               <ul className="dropdown-menu">
@@ -124,16 +126,15 @@ const Navbar = () => {
             <a href="#news" className="nav-link">News</a>
           </li>
         </ul>
-        <a href="/enrollment" className="enroll-button">Enroll Now</a>
+        <a href="/enrollment" className="enroll-button">EnrollNow</a>
 
-
-
-
-        <div className="search-icon">
-          <i className="fas fa-search"></i>
-        </div>
+ 
         <div className="admin-signin-button">
-          <a href="/signin" className="admin-button">Admin SignIn</a>
+          <a href="/signin" className="admin-button">AdminSignIn</a>
+        </div>
+
+        <div className="menu-icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          <FontAwesomeIcon icon={faBars} />
         </div>
 
       </div>
@@ -142,4 +143,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

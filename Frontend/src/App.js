@@ -7,6 +7,7 @@ import ReasonsToChooseMela from "./components/choosemela";
 import OurSchools from "./components/ourschools";
 import Offer from "./components/offer";
 import Future from "./components/future";
+import EnrollForm from "./components/enrolldisplay";
 // import Footer from "./components/footer";
 // import AdmissionForm from "./components/admission";
 // import Kindergarten from "./components/kindergarten";

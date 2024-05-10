@@ -18,6 +18,28 @@
   height: auto;
 }
 
+.menu-icon{
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+  margin-right: 20px;
+}
+
+
+.nav-menu.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  background-color: #28D91D;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+
+
 .nav-menu {
   list-style: none;
   display: flex;
@@ -40,10 +62,7 @@
   color: red;
 }
 
-.search-icon {
-  margin-right: 15px;
-  cursor: pointer;
-}
+
 
 .enroll-button,
 .admin-button {
@@ -55,6 +74,8 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-weight: bold;
+  max-width: fit-content;
+  max-height: fit-content;
 }
 
 .enroll-button:hover,
@@ -66,10 +87,9 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #ffffff;
+  background-color: #ffffff27;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  display: none;
+  z-index: 1000;  
 }
 
 .nav-item:hover .dropdown-menu {
@@ -89,10 +109,19 @@
   color: darkred;
 }
 
+.nav-menu.active {
+  display: flex;
+  flex-direction: column;
+}
+
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
   .navbar {
     height: auto; /* Change height to auto for responsiveness */
+  }
+
+  .menu-icon {
+    display: block;
   }
   
   .navbar-logo img {
@@ -101,16 +130,26 @@
   
   .nav-menu {
     display: none; /* Hide menu items by default on smaller screens */
+    position: absolute;
+    top: 80px;
+    right: 0;
+    /* background-color: #28D91D; */
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
   }
-  
-  .search-icon {
-    display: block; /* Display search icon on smaller screens */
+
+  .nav-menu.mobile-menu-open {
+    display: flex;
+    flex-direction: column;
   }
   
   .enroll-button,
   .admin-button {
     display: none; /* Hide enroll and admin buttons on smaller screens */
-  }.display-applicants {
+  }
+  
+  .display-applicants {
     padding: 20px;
     text-align: center;
   }
@@ -176,8 +215,7 @@
     max-width: 160px;
   }
   
-  .bu
-  
+    
   .dropdown-menu {
     position: static; /* Change dropdown menu position to static */
     display: none; /* Hide dropdown menu by default on smaller screens */
@@ -186,6 +224,7 @@
   .nav-item:hover .dropdown-menu {
     display: none; /* Hide dropdown menu on hover for smaller screens */
   }
+
 }
 
 

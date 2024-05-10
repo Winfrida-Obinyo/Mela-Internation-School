@@ -6,8 +6,8 @@
 .applicants-form {
   max-width: 600px;
   margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
+  padding: 20px; /* Adjusted padding to reduce space */
+  border: 1px solid white;
   border-radius: 8px;
   background-color: #f9f9f9;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -17,6 +17,7 @@ legend {
   font-size: 1.2em;
   font-weight: bold;
   margin-bottom: 10px;
+  color: darkred; /* Set the color of legend text to dark red */
 }
 
 .applicants-list {
@@ -45,7 +46,7 @@ input[type="checkbox"] {
 }
 
 .btn-container {
-  background: linear-gradient(180deg, #28D91D 0%, #9DE6A1 0%); 
+  background: linear-gradient(180deg, #28D91D 0%, #9DE6A1 0%);
 }
 
 .button {
@@ -58,10 +59,12 @@ input[type="checkbox"] {
   cursor: pointer;
   transition: background-color 0.3s ease;
   display: block;
-  margin-top: 50px;
+  margin-top: 20px; /* Reduced margin-top */
   text-decoration: none;
   text-align: center;
   max-width: 160px;
+  margin-left: auto; /* Center the button horizontally */
+  margin-right: auto; /* Center the button horizontally */
 }
 
 .button:hover {
@@ -73,7 +76,8 @@ input[type="checkbox"] {
   width: 100%;
 }
 
-.data-table th, .data-table td {
+.data-table th,
+.data-table td {
   border: 1px solid #080808;
   padding: 8px;
 }
@@ -81,4 +85,6 @@ input[type="checkbox"] {
 .data-table th {
   background-color: #f2f2f2;
   text-align: left;
+  color: darkred; /* Set the color of table header text to dark red */
 }
+

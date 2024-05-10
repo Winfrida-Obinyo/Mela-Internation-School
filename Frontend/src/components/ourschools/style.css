@@ -1,31 +1,64 @@
-
 .extracurricular-container {
-    text-align: center;
-    font-size: x-large;
-    color: red;
-  }
-  .h2{
-    text-align: center;
-    margin-top: 20px;
-  }
-  
+  text-align: center;
+  font-size: x-large;
+  color: red;
+}
+
+.h2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.extracurricular {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.extracurricular-item {
+  text-align: center;
+}
+
+.extracurricular-item img {
+  width: 100%; /* Ensure images fill their container */
+  height: 300px; /* Set a fixed height for the images */
+  object-fit: cover; /* Maintain aspect ratio and fill container */
+  border-radius: 10px; /* Add border radius */
+}
+
+.extracurricular-item p {
+  margin-top: 10px; /* Add space below the image */
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
   .extracurricular {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px; 
+    grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
   }
-  
-  .extracurricular-item {
-    text-align: center;
-  }
-  
+
   .extracurricular-item img {
-    width: 90%; /* Ensure images fill their container */
-    height: 300px; /* Set a fixed height for the images */
-    object-fit: cover; /* Maintain aspect ratio and fill container */
-    border-radius: 10px; /* Add border radius */
+    height: 250px; /* Reduce image height on medium screens */
   }
-  
-  .extracurricular-item p {
-    margin-top: 10px; /* Add space below the image */
+}
+
+@media (max-width: 768px) {
+  .extracurricular {
+    grid-template-columns: repeat(1, 1fr); /* Single column on small screens */
   }
+
+  .extracurricular-item img {
+    height: 200px; /* Reduce image height on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .extracurricular-item img {
+    height: 150px; /* Further reduce image height on extra small screens */
+    width: 90%; /* Adjust image width for smaller screens */
+    border-radius: 0; /* Remove border radius for smaller screens if needed */
+  }
+}
+
+
+

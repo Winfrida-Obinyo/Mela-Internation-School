@@ -30,11 +30,6 @@
   display: flex;
   align-items: center;
   text-align: center;
-}
-
-.mission,
-.vision,
-.core-values {
   padding: 20px;
   color: darkgreen; 
   border: 2px solid darkgreen; 
@@ -43,16 +38,16 @@
   position: relative; 
 }
 
-
-
+/* Media Query for screens up to 768px width */
 @media (max-width: 768px) {
   .mission,
   .vision,
   .core-values {
-    width: 100%; 
+    width: 90%; /* Reduce width to 90% for smaller screens */
     margin-bottom: 20px; 
   }
 }
+
 
 
 
