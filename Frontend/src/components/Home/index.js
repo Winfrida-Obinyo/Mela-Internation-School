@@ -39,7 +39,7 @@ const HomePage = () => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 5000); 
 
-    return () => clearInterval(interval);
+    return () => clearInterval(interval);// eslint-disable-next-line
   }, []);
 
   const handleApplyForAdmission = () => {
