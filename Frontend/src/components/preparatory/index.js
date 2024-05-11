@@ -53,10 +53,7 @@ const PreparatorySchool = () => {
               Students engage in comprehensive studies across various subjects,
               including mathematics, science, humanities, and arts, fostering a well-rounded education.
             </p>
-            <p>
-              We prioritize individualized learning, encouraging students to explore their interests
-              and pursue personal growth through tailored academic programs and extracurricular activities.
-            </p>
+
           </div>
 
           <div className="info-right">
@@ -116,7 +113,8 @@ const PreparatorySchool = () => {
 
         <div className="additional-section">
           <div className="additional-left">
-  <h3>Early Years Foundation Curriculum (Age 1-6)</h3>
+  <h3>Early Years Curriculum</h3>
+  <br></br>
   <h4>Prime Areas of Learning:</h4>
   <p>
     Personal, Social and Emotional Development: Building positive relationships,

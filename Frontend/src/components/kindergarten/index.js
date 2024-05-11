@@ -123,7 +123,7 @@ const Kindergarten = () => {
 
         <div className="additional-section">
           <div className="additional-left">
-            <h3>Early Years Foundation Curriculum (Age 3-5)</h3>
+            <h3>Early Years Curriculum</h3>
             <h4>Prime Areas of Learning:</h4>
             <p>
               Personal, Social and Emotional Development: Building positive relationships,

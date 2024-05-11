@@ -1,110 +1,138 @@
+/* Base styles */
 .senior-high-school-container {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: darkred; 
-  }
-  
+  padding: 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: darkred;
+}
+
+.image-container {
+  display: grid;
+  gap: 20px;
+}
+
+.image-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.image-item:hover img {
+  transform: scale(1.1);
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.info-left,
+.info-right {
+  width: 48%;
+}
+
+.dropdown-btn {
+  background-color: darkred;
+  color: white;
+  border: none;
+  padding: 20px;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-bottom: 5px solid white;
+}
+
+.dropdown-content {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  width: 90%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content p {
+  margin: 0;
+}
+
+.dropdown-btn.active {
+  background-color: white;
+  color: darkred;
+}
+
+.additional-section {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.additional-left {
+  width: 60%;
+}
+
+.additional-left h3,
+.additional-left h4 {
+  color: navy;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.additional-right {
+  width: 35%;
+}
+
+.additional-right img {
+  width: 120%; /* Increase image width on smaller screens */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles */
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
   .image-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px; 
+      grid-template-columns: repeat(2, 1fr); /* Adjust image grid for smaller screens */
   }
-  
-  .image-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  }
-  
-  .image-item img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-  }
-  
-  .image-item:hover img {
-    transform: scale(1.1);
-  }
-  
-  .info-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-  }
-  
   .info-left,
   .info-right {
-    width: 48%;
+      width: 100%; /* Make info sections full width on small screens */
   }
-  
-  .dropdown-btn {
-    background-color: darkred; 
-    color: white;
-    border: none;
-    padding: 20px;
-    cursor: pointer;
-    width: 100%;
-    text-align: left;
-    border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    border-bottom: 5px solid white; 
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+  .section-title {
+      font-size: 1.5rem; /* Adjust font size for very small screens */
+        .additional-right img {
+    width: 140%; /* Increase width more on very small screens */
   }
-  
-  .dropdown-content {
-    background-color: #f9f9f9;
-    padding: 20px; 
-    border: 1px solid #ddd;
-    border-top: none;
-    border-radius: 0 0 8px 8px; 
-    width: 90%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-  }
-  
-  .dropdown-content p {
-    margin: 0;
-  }
-  
-  .dropdown-btn.active {
-    background-color: white;
-    color: darkred; 
-  }
-  
-  .additional-section {
-    margin-top: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start; 
-    
-  }
-  
-  .additional-left {
-    width: 60%;
-  }
-  
-  .additional-left h3,
-  .additional-left h4 {
-    color: navy; 
-    font-size: 1.5rem; 
-    margin-bottom: 10px; 
-  }
-  
-  .additional-right {
-    width: 35%;
-    display: flex;
-    justify-content: flex-start; 
-    align-items: flex-start; 
-  
   .additional-right img {
-    width: 150%;
-    height: auto;
-    border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 140%; /* Increase width more on very small screens */
   }
+  }
+  .additional-left {
+      width: 100%; /* Make additional left section full width on very small screens */
+      
+  }
+
 }
   

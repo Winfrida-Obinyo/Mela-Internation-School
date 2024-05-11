@@ -1,111 +1,132 @@
+/* Base styles for all screen sizes */
 .preparatory-school-container {
-    padding: 20px;
-    text-align: center;
-  }
-  
+  padding: 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.8rem; /* Adjust base font size for better scaling */
+  margin-bottom: 20px;
+  color: navy;
+}
+
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* Responsive grid layout with minimum width for images */
+  gap: 20px;
+}
+
+.image-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.image-item:hover img {
+  transform: scale(1.1);
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+}
+
+.info-left,
+.info-right {
+  width: 48%;
+}
+
+.dropdown-btn {
+  background-color: navy;
+  color: white;
+  border: none;
+  padding: 15px 20px; /* Reduce horizontal padding for better button size */
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-bottom: 5px solid white;
+}
+
+.dropdown-content {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  width: 90%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content p {
+  margin: 0;
+}
+
+.dropdown-btn.active {
+  background-color: white;
+  color: navy;
+}
+
+.additional-section {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.additional-left {
+  width: 60%;
+}
+
+.additional-left h3,
+.additional-left h4 {
+  color: navy;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.additional-right {
+  width: 35%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-right: 0; /* Remove margin for better layout on small screens */
+}
+
+.additional-right img {
+  max-width: 100%; /* Ensure image responsiveness */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 80px;
+}
+
+/* Media Queries (optional for further adjustments) */
+@media (max-width: 768px) {
+  /* Adjustments for smaller screens */
   .section-title {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: navy; 
+    font-size: 1.5rem; /* Reduce font size for smaller screens */
   }
-  
-  .image-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px; 
-  }
-  
-  .image-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  }
-  
-  .image-item img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-  }
-  
-  .image-item:hover img {
-    transform: scale(1.1);
-  }
-  
-  .info-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-  }
-  
+
   .info-left,
   .info-right {
-    width: 48%;
+    width: 100%; /* Make elements full width for smaller screens */
   }
-  
-  .dropdown-btn {
-    background-color: navy; 
-    color: white;
-    border: none;
-    padding: 20px;
-    cursor: pointer;
-    width: 100%;
-    text-align: left;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    border-bottom: 5px solid white; 
-  }
-  
-  .dropdown-content {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-top: none;
-    border-radius: 0 0 8px 8px; 
-    
-    width: 90%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-  }
-  
-  .dropdown-content p {
-    margin: 0;
-  }
-  
-  .dropdown-btn.active {
-    background-color: white;
-    color: navy; 
-  }
-  
-  .additional-section {
-    margin-top: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start; 
-  }
-  
+
   .additional-left {
-    width: 60%;
+    width: 100%; /* Make element full width for smaller screens */
   }
-  
-  .additional-left h3,
-  .additional-left h4 {
-    color: navy; 
-    font-size: 1.2rem; 
-    margin-bottom: 15px; 
-  }
-  
-  .additional-right {
-    width: 35%;
-    display: flex;
-    justify-content: flex-start; 
-    align-items: flex-start; 
-    margin-right: 220px; 
-  }
-  
-  .additional-right img {
-    width: 160%;
-    height: auto;
-    border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  }
-  
+}
+
+

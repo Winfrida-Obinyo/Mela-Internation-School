@@ -1,18 +1,18 @@
 .mission-container {
-  padding: 20px; 
+  padding: 20px;
   background-color: white;
 }
 
 .mission-item {
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .mission-item h2 {
-  color: red; 
+  color: red;
 }
 
 .mission-item p {
-  color: black; 
+  color: black;
 }
 
 .mission-vision-container {
@@ -25,31 +25,71 @@
 .mission,
 .vision,
 .core-values {
-  font-size: 24px;
+  font-size: 20px; /* Adjusted base font size for better readability */
   font-weight: bold;
   display: flex;
   align-items: center;
   text-align: center;
   padding: 20px;
-  color: darkgreen; 
-  border: 2px solid darkgreen; 
+  color: darkgreen;
+  background-color: white; /* Removed border, using background color instead */
   border-radius: 10px;
-  width: 30%; 
-  position: relative; 
+  width: 30%; /* Adjusted base width */
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added box-shadow for a subtle border effect */
+  cursor: pointer; /* Added cursor for hover effect */
+  transition: background-color 0.3s ease; /* Added transition for hover effect */
 }
 
-/* Media Query for screens up to 768px width */
-@media (max-width: 768px) {
+.mission:hover,
+.vision:hover,
+.core-values:hover {
+  background-color: #e8f0f2; /* Added hover background color */
+}
+
+.core-values {
+  /* No additional styles needed for core-values to look consistent */
+}
+
+/* Media Queries */
+@media (max-width: 835px) {
+  /* Adjustments for screens up to 835px */
   .mission,
   .vision,
   .core-values {
-    width: 90%; /* Reduce width to 90% for smaller screens */
-    margin-bottom: 20px; 
+    width: 45%; /* Adjusted width for medium screens */
   }
 }
 
+@media (max-width: 768px) {
+  /* Adjustments for screens up to 768px (including 820px) */
+  .mission,
+  .vision,
+  .core-values {
+    width: 100%; /* Make elements full width for smaller screens */
+    margin-bottom: 15px; /* Reduce margin for better spacing */
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+}
 
+@media (max-width: 480px) {
+  /* Adjustments for extra small screens (including 360px, 375px, 390px, 280px) */
+  .mission-container,
+  .mission-vision-container {
+    padding: 15px; /* Reduce padding for very small screens */
+  }
 
-
-  
-  
+  .mission,
+  .vision,
+  .core-values {
+    font-size: 16px; /* Further reduce font size for extra small screens */
+  }
+  @media (max-width: 835px) {
+    /* Adjustments for screens up to 835px */
+    .mission,
+    .vision,
+    .core-values {
+      width: 45%; /* Adjusted width for medium screens */
+    }
+  }
+}

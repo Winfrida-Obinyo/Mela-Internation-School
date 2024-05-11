@@ -1,75 +1,88 @@
-
+/* Base styles for all screen sizes */
 .admission-form-container {
-  max-width: 700px;
+  max-width: 100%; /* Allow full width for smaller screens */
   margin: 0 auto;
-  padding: 60px;
+  padding: 20px; /* Base padding for all screens */
   background-color: white;
-  border-radius: 20px; 
+  border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .form-title {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 15px; /* Base margin for all screens */
+  font-size: 1.2rem; /* Base font size for all screens */
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 12px; /* Base margin for all screens */
 }
 
 .form-label {
-  font-weight: normal; 
+  font-weight: normal;
 }
 
 .form-label.required::after {
-  content: ' *'; 
-  color: red; 
+  content: ' *';
+  color: red;
 }
 
 .form-control {
   width: 100%;
-  padding: 12px; 
-  border-radius: 8px; 
+  padding: 10px;
+  border-radius: 8px;
   border: 1px solid #ced4da;
-}
-
-.form-control:placeholder-shown {
-  color: red; 
-}
-
-.form-placeholder {
   font-size: 14px;
+}
+
+.form-control::placeholder {
   color: #6c757d;
 }
 
 .submit-button {
   width: 100%;
-  margin-top: 20px;
-  border-radius: 50px; 
+  margin-top: 15px;
+  border-radius: 50px;
   background-color: darkgreen;
   padding: 10px;
   color: white;
-  margin-left: 250px;
 }
 
-
 textarea.form-control {
-  resize: vertical; 
+  resize: vertical;
 }
 
 select.form-control {
-  appearance: none; 
+  appearance: none;
 }
 
+/* Media queries for responsiveness */
 
-.form-group .form-control::placeholder {
-  color: #6c757d;
-  font-size: 14px;
-  border-radius: 10px; 
+/* Small screens (up to 576px) */
+@media only screen and (max-width: 576px) {
+  .form-title {
+    font-size: 1.1rem; /* Reduce font size for very small screens */
+  }
+
+  .form-control {
+    font-size: 13px; /* Reduce font size for very small screens */
+  }
 }
 
+/* Medium screens (576px to 768px) */
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .admission-form-container {
+    padding: 25px; /* Adjust padding for medium screens */
+  }
+}
 
+/* Large screens (768px and above) */
+@media only screen and (min-width: 769px) {
+  .admission-form-container {
+    padding: 30px; /* Increase padding for large screens */
+  }
 
-
-
-  
+  .form-title {
+    font-size: 1.3rem; /* Increase font size for large screens */
+  }
+}

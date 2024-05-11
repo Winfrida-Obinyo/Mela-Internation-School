@@ -11,7 +11,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 68, 69, 0.192); 
+  background-color: rgba(0, 68, 69, 0.192);
 }
 
 .banner {
@@ -31,13 +31,14 @@
 
 .banner-content {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: rgba(255, 255, 255, 0.9); 
-  z-index: 10; 
-  font-size: 2em;
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+  font-size: 2em; /* Base font size for all screens */
+  padding: 0 20px; /* Reduce horizontal padding for better spacing */
 }
 
 .navigation-dots {
@@ -51,12 +52,12 @@
 }
 
 .dot {
-  width: 20px;
-  height: 20px;
+  width: 12px; /* Reduced dot size for cleaner look */
+  height: 12px;
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin: 0 6px; 
+  margin: 0 4px; /* Reduced margin between dots */
 }
 
 .dot.active {
@@ -65,65 +66,52 @@
 
 .apply-button {
   display: inline-block;
-  padding: 8px 12px;
+  padding: 5px 12px;
   margin-top: 20px;
-  font-size: 1em;
+  font-size: 0.5em;
   font-weight: bold;
-  background-color: darkgreen; 
-  color: #fff; 
+  background-color: darkgreen;
+  color: #fff;
   border: none;
   border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  /* Adjusted width for different screen sizes */
-  width: 200px;
+  margin-left: 10px;
 }
 
 .apply-button:hover {
-  background-color: #388e3c; 
+  background-color: #388e3c;
 }
 
 /* Media Queries */
-@media (max-width: 1200px) {
-  .banner-content {
-    font-size: 1.8em;
-  }
-}
-
-@media (max-width: 992px) {
+@media (max-width: 835px) {
+  /* Adjustments for screens up to 835px */
   .banner-content {
     font-size: 1.5em;
   }
 }
 
 @media (max-width: 768px) {
+  /* Adjustments for screens up to 768px (including 820px) */
   .banner-content {
-    font-size: 1.2em;
+    font-size: 1.3em;
   }
-  
+
   .apply-button {
     font-size: 0.8em;
-    width: 150px; /* Adjusted width for smaller screens */
+    width: 180px; /* Adjust width for smaller screens */
   }
 }
 
 @media (max-width: 480px) {
+  /* Adjustments for extra small screens (including 360px, 375px, 390px, 280px) */
   .banner-content {
-    font-size: 1em;
+    font-size: 1.2em;
+    padding: 0 10px; /* Further reduce padding for very small screens */
   }
-  
+
   .apply-button {
-    font-size: 0.6em;
-    width: 120px; /* Further reduced width for extra small screens */
+    font-size: 0.7em;
+    width: 150px; /* Further reduce width for extra small screens */
   }
 }
-
-
-
- 
-  
-  
-  
-  
-  
-  

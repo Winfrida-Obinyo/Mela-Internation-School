@@ -49,6 +49,7 @@ const Navbar = () => {
         </a>
 
 
+
         <ul className={`nav-menu ${mobileMenuOpen ? 'mobile-menu-open' : ''}`}>
           <li className="nav-item">
             <a href="/" className="nav-link">Home</a>

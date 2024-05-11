@@ -6,8 +6,9 @@ const Mission = () => {
     <div className="mission-container">
       <div className="mission-vision-container">
         <div className="mission">MISSION</div>
-        <div className="vision">VISION</div>
         <div className="core-values">CORE VALUES</div>
+
+        <div className="vision">VISION</div>
       </div>
       <div className="mission-item">
         <h2>Mission</h2>

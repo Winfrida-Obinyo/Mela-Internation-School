@@ -1,5 +1,5 @@
 .footer-container {
-  background: linear-gradient(180deg, #28D91D 21%, #9DE6A1 41%);
+  background: darkgreen;
   color: #fff;
   padding: 30px 10px; /* Reduce horizontal padding */
   display: grid;

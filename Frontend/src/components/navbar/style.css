@@ -1,7 +1,7 @@
 /* Default styles */
 .navbar {
   /* background-color: #ffffff; */
-  background: linear-gradient(180deg, #28D91D 21%, #9DE6A1 41%);
+  background: rgba(255, 255, 255, 0);
   padding: 10px; /* Adjust overall padding */
   height: 85px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -21,7 +21,7 @@
 .menu-icon{
   cursor: pointer;
   font-size: 24px;
-  color: #fff;
+  color: darkgreen;
   margin-right: 20px;
 }
 
@@ -53,7 +53,7 @@
 
 .nav-link {
   text-decoration: none;
-  color: rgb(240, 247, 242);
+  color: darkgreen;
   transition: color 0.3s ease;
   font-weight: bold;
 }
@@ -217,8 +217,8 @@
   
     
   .dropdown-menu {
-    position: static; /* Change dropdown menu position to static */
-    display: none; /* Hide dropdown menu by default on smaller screens */
+    position: static; 
+    display: none; 
   }
   
   .nav-item:hover .dropdown-menu {
