@@ -1,0 +1,44 @@
+/* Media Queries for Responsive Design */
+
+@media (max-width: 1200px) {
+    .about-banner {
+      padding: 15px;
+      max-width: 90%; /* Adjusted: Reduce maximum width for medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about-us-container {
+      min-height: 300px; /* Corrected: Adjust the minimum height for smaller screens */
+    }
+  
+    .about-banner {
+      max-width: 80%; /* Adjusted: Reduce maximum width for smaller screens */
+    }
+  
+    .about-banner h1 {
+      font-size: 24px; /* Adjusted: Reduce heading font size for smaller screens */
+    }
+  
+    .about-banner p {
+      font-size: 14px; /* Adjusted: Reduce paragraph font size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-banner {
+      padding: 10px; /* Further reduce padding for very small screens */
+      max-width: 90%; /* Adjusted: Reduce maximum width for very small screens */
+    }
+  
+    .about-banner h1 {
+      font-size: 20px; /* Adjusted: Further reduce heading font size for very small screens */
+    }
+  
+    .about-banner p {
+      font-size: 12px; /* Adjusted: Further reduce paragraph font size for very small screens */
+    }
+  }
+  
+  
+  
