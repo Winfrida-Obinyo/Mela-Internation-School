@@ -47,9 +47,6 @@
   background-color: #e8f0f2; /* Added hover background color */
 }
 
-.core-values {
-  /* No additional styles needed for core-values to look consistent */
-}
 
 /* Media Queries */
 @media (max-width: 835px) {

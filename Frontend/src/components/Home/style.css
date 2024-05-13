@@ -39,6 +39,7 @@
   z-index: 10;
   font-size: 2em; /* Base font size for all screens */
   padding: 0 20px; /* Reduce horizontal padding for better spacing */
+  display: inline-block;
 }
 
 .navigation-dots {
@@ -66,9 +67,9 @@
 
 .apply-button {
   display: inline-block;
-  padding: 5px 12px;
-  margin-top: 20px;
-  font-size: 0.5em;
+  padding: 1.1px 30px;
+  margin-top: 60px;
+  font-size: 0.6em;
   font-weight: bold;
   background-color: darkgreen;
   color: #fff;
@@ -76,12 +77,30 @@
   border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-left: 10px;
+  margin-right: 60px;
 }
 
 .apply-button:hover {
   background-color: #388e3c;
 }
+
+/* .admin-signin-button{
+  display: inline-block;
+  padding: 1.1px 20px;
+  margin-top: 10px;
+  font-size: 0.6em;
+  font-weight: bold;
+  background-color: darkgreen;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-button:hover {
+  background-color: darkgreen;
+} */
 
 /* Media Queries */
 @media (max-width: 835px) {
@@ -101,6 +120,11 @@
     font-size: 0.8em;
     width: 180px; /* Adjust width for smaller screens */
   }
+
+  .admin-button {
+    font-size: 0.8em;
+    padding: 8px 16px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -113,5 +137,10 @@
   .apply-button {
     font-size: 0.7em;
     width: 150px; /* Further reduce width for extra small screens */
+  }
+
+  .admin-button {
+    font-size: 0.7em;
+    padding: 6px 12px;
   }
 }

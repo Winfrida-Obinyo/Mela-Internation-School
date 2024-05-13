@@ -48,8 +48,6 @@ const Navbar = () => {
           <img src="/images/logo6.png" alt="School Logo" />
         </a>
 
-
-
         <ul className={`nav-menu ${mobileMenuOpen ? 'mobile-menu-open' : ''}`}>
           <li className="nav-item">
             <a href="/" className="nav-link">Home</a>
@@ -127,15 +125,18 @@ const Navbar = () => {
             <a href="#news" className="nav-link">News</a>
           </li>
         </ul>
-        <a href="/enrollment" className="enroll-button">EnrollNow</a>
+
+        <div className='new-nav-container'>
+        <a href="https://share-eu1.hsforms.com/1xNxowBcySfG0y7CTKSu_bw2e4e7p" className="enroll-button">EnrollNow</a>
 
  
-        <div className="admin-signin-button">
+        {/* <div className="admin-signin-button">
           <a href="/signin" className="admin-button">AdminSignIn</a>
-        </div>
+        </div> */}
 
         <div className="menu-icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
           <FontAwesomeIcon icon={faBars} />
+        </div>
         </div>
 
       </div>

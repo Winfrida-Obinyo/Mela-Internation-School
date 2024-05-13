@@ -60,11 +60,15 @@ const HomePage = () => {
           <div className="banner-content">
             <h1>{captions[currentImageIndex].title}</h1>
             <p>{captions[currentImageIndex].description}</p>
-            <Link to="/admission">
-            <button className="apply-button" onClick={handleApplyForAdmission}>
-              Apply for Admission
-            </button>
+            <Link to="https://share-eu1.hsforms.com/1USPYVC7RR62fpG8nO80uRQ2e4e7p">
+              <button className="apply-button" onClick={handleApplyForAdmission}>
+                Apply for Admission
+              </button>
             </Link>
+            {/* Place the AdminSignIn button below the Apply for Admission button */}
+            {/* <div className="admin-signin-button">
+              <a href="/signin" className="admin-button">AdminSignIn</a>
+            </div> */}
           </div>
         </div>
         <div className="navigation-dots">
@@ -75,14 +79,11 @@ const HomePage = () => {
               onClick={() => handleImageChange(index)}
             ></button>
           ))}
-
-
         </div>
-
-
       </div>
     </div>
   );
 };
 
 export default HomePage;
+

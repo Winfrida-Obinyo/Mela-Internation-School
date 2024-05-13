@@ -3,7 +3,8 @@
   /* background-color: #ffffff; */
   background: rgba(255, 255, 255, 0);
   padding: 10px; /* Adjust overall padding */
-  height: 85px;
+  /* height: 85px; */
+  max-height: 65px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -11,10 +12,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .navbar-logo img {
-  max-width: 160px;
+  max-width: 120px;
+  max-height: 120px;
   height: auto;
 }
 
@@ -31,9 +34,9 @@
   flex-direction: column;
   position: absolute;
   top: 80px;
-  right: 0;
+  right: 60; /* Move the menu to the right edge */
   background-color: #28D91D;
-  width: 100%;
+  width:100%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
@@ -44,10 +47,15 @@
   list-style: none;
   display: flex;
   align-items: center;
+  /* margin-top: 10px; */
+  /* margin-left: 60px; */
+  /* justify-content: space-between; */
+  text-align: left;
+
 }
 
 .nav-item {
-  margin-left: 15px;
+  margin-left: 10px;
   position: relative;
 }
 
@@ -64,8 +72,8 @@
 
 
 
-.enroll-button,
-.admin-button {
+.enroll-button
+ {
   padding: 8px 16px;
   background-color: green;
   color: #ffffff;
@@ -76,20 +84,23 @@
   font-weight: bold;
   max-width: fit-content;
   max-height: fit-content;
+  text-decoration: none;
+  float: left;
+  margin-right: 20px;
 }
 
-.enroll-button:hover,
-.admin-button:hover {
+.enroll-button:hover
+ {
   background-color: darkgreen;
 }
 
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
+  left: 30px;
   background-color: #ffffff27;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 1000;  
+  z-index: 1000;
 }
 
 .nav-item:hover .dropdown-menu {
@@ -114,7 +125,21 @@
   flex-direction: column;
 }
 
+.new-nav-container {
+  display: flex; /* Enable flexbox layout */
+  justify-content: space-between; /* Distribute space between elements */
+}
 /* Media queries for responsiveness */
+@media(min-width: 768px) {
+  .menu-icon {
+    display: none;
+  }
+
+  .nav-link {
+    font-size: large;
+  }
+
+}
 @media (max-width: 768px) {
   .navbar {
     height: auto; /* Change height to auto for responsiveness */
@@ -131,12 +156,17 @@
   .nav-menu {
     display: none; /* Hide menu items by default on smaller screens */
     position: absolute;
-    top: 80px;
-    right: 0;
+    top: 69px;
+    left: 100px;
     /* background-color: #28D91D; */
-    width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 64%;
+    height: fit-content;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.87);
     z-index: 1000;
+    align-items: flex-start;
+    background-color: #cccccc8c;
+    margin-right: 40px;
+    list-style: disc;
   }
 
   .nav-menu.mobile-menu-open {
@@ -144,7 +174,7 @@
     flex-direction: column;
   }
   
-  .enroll-button,
+  /* .enroll-button, */
   .admin-button {
     display: none; /* Hide enroll and admin buttons on smaller screens */
   }
@@ -218,12 +248,9 @@
     
   .dropdown-menu {
     position: static; 
-    display: none; 
+    
   }
   
-  .nav-item:hover .dropdown-menu {
-    display: none; /* Hide dropdown menu on hover for smaller screens */
-  }
 
 }
 
