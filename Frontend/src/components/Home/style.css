@@ -68,7 +68,7 @@
 .apply-button {
   display: inline-block;
   padding: 1.1px 30px;
-  margin-top: 60px;
+  /* margin-top: 30px; */
   font-size: 0.6em;
   font-weight: bold;
   background-color: darkgreen;
