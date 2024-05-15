@@ -5,6 +5,7 @@
 # Backend/node_modules/
 # Backend/
 */node_modules
+*/Backend
 /.pnp
 .pnp.js
 
