@@ -84,24 +84,6 @@
   background-color: #388e3c;
 }
 
-/* .admin-signin-button{
-  display: inline-block;
-  padding: 1.1px 20px;
-  margin-top: 10px;
-  font-size: 0.6em;
-  font-weight: bold;
-  background-color: darkgreen;
-  color: #fff;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.admin-button:hover {
-  background-color: darkgreen;
-} */
-
 /* Media Queries */
 @media (max-width: 835px) {
   /* Adjustments for screens up to 835px */

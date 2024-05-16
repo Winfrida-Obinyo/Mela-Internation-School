@@ -17,7 +17,7 @@ const Future = () => {
         </p>
         <div className="future-buttons">
           <Link to="/feestructure"><button className="future-button">FEE STRUCTURE</button></Link>
-          <Link to="/enrollment"><button className="future-button">ENROLL NOW</button></Link>
+          <Link to="https://share-eu1.hsforms.com/1xNxowBcySfG0y7CTKSu_bw2e4e7p"><button className="future-button">ENROLL NOW</button></Link>
         </div>
       </div>
     </div>

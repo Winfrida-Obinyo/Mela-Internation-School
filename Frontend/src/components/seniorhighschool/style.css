@@ -122,12 +122,9 @@
 @media (max-width: 480px) {
   .section-title {
       font-size: 1.5rem; /* Adjust font size for very small screens */
-        .additional-right img {
-    width: 140%; /* Increase width more on very small screens */
   }
   .additional-right img {
     width: 140%; /* Increase width more on very small screens */
-  }
   }
   .additional-left {
       width: 100%; /* Make additional left section full width on very small screens */
