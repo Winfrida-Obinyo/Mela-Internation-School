@@ -3,7 +3,7 @@ import './style.css'; // Import your CSS file for styling
 
 const EnrollForm = () => {
   // State to manage enrolled people
-  const [enrolledPeople, setEnrolledPeople] = useState([]);
+  const [enrolledPeople] = useState([]);
 
   return (
     <div className="enroll-form-container">

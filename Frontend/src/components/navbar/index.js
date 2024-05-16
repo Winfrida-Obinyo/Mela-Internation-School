@@ -54,7 +54,7 @@ const Navbar = () => {
           </li>
           <li className="nav-item">
             <a
-              href="#"
+              href="/"
               className="nav-link"
               onClick={() => toggleDropdown('schools')}
             >
@@ -71,7 +71,7 @@ const Navbar = () => {
           </li>
           <li className="nav-item">
             <a
-              href="#"
+              href="#about"
               className="nav-link"
               onClick={() => toggleDropdown('about')}
             >
@@ -89,7 +89,7 @@ const Navbar = () => {
           </li>
           <li className="nav-item">
             <a
-              href="#"
+              href="#academic"
               className="nav-link"
               onClick={() => toggleDropdown('academic')}
             >
@@ -107,7 +107,7 @@ const Navbar = () => {
           </li>
           <li className="nav-item">
             <a
-              href="#"
+              href="#school-life"
               className="nav-link"
               onClick={() => toggleDropdown('schoolLife')}
             >

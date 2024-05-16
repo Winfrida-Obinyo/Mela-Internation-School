@@ -27,7 +27,7 @@ const DisplayApplicants = ({ history }) => {
           </Link>
           <button
             className="button"
-            style={{ marginLeft: 'auto', marginLeft: '320px' }} // Apply inline style
+            style={{ marginLeft: '320px' }} // Apply inline style
             onClick={handleLogout}
           >
             Logout

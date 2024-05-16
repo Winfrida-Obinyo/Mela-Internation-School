@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 
 const AboutUs = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentImageIndex] = useState(0);
   const images = [
     '/images/about2.jpg',
     '/images/about1.jpg', 
   ];
 
-  const handleChangeImage = () => {
-    const newIndex = (currentImageIndex + 1) % images.length;
-    setCurrentImageIndex(newIndex);
-  };
+  // const handleChangeImage = () => {
+  //   const newIndex = (currentImageIndex + 1) % images.length;
+  //   setCurrentImageIndex(newIndex);
+  // };
 
   const backgroundImage = images[currentImageIndex];
 

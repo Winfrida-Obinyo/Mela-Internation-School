@@ -17,28 +17,28 @@ const Kindergarten = () => {
 
         <div className="image-container">
           <div className="image-item">
-            <img src="/images/kinder1.jpg" alt="Kindergarten Image" />
+            <img src="/images/kinder1.jpg" alt="Kindergarten" />
           </div>
           <div className="image-item">
-            <img src="/images/kinder2.jpg" alt="Kindergarten Image" />
+            <img src="/images/kinder2.jpg" alt="Kindergarten" />
           </div>
           <div className="image-item">
-            <img src="/images/kinder3.jpg" alt="Kindergarten Image" />
+            <img src="/images/kinder3.jpg" alt="Kindergarten" />
           </div>
           <div className="image-item">
-            <img src="/images/kinder4.jpg" alt="Kindergarten Image" />
+            <img src="/images/kinder4.jpg" alt="Kindergarten" />
           </div>
           <div className="image-item">
-            <img src="/images/kinder6.jpg" alt="Kindergarten Image" />
+            <img src="/images/kinder6.jpg" alt="Kindergarten" />
           </div>
           <div className="image-item">
-            <img src="/images/kinder5.jpg" alt="Kindergarten Image" />
+            <img src="/images/kinder5.jpg" alt="Kindergarten" />
           </div>
           <div className="image-item">
-            <img src="/images/kinder7.jpg" alt="Kindergarten Image" />
+            <img src="/images/kinder7.jpg" alt="Kindergarten" />
           </div>
           <div className="image-item">
-            <img src="/images/kinder8.jpg" alt="Kindergarten Image" />
+            <img src="/images/kinder8.jpg" alt="Kindergarten" />
           </div>
         </div>
 
@@ -155,7 +155,7 @@ const Kindergarten = () => {
           </div>
 
           <div className="additional-right">
-            <img src="/images/kinder5.jpg" alt="Additional Image" />
+            <img src="/images/kinder5.jpg" alt="Additional" />
           </div>
         </div>
 

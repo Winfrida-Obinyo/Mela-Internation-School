@@ -17,28 +17,28 @@ const JuniorHighSchool = () => {
 
         <div className="image-container">
           <div className="image-item">
-            <img src="/images/jun8.jpg" alt="Junior High School Image" />
+            <img src="/images/jun8.jpg" alt="Junior High School" />
           </div>
           <div className="image-item">
-            <img src="/images/jun7.jpg" alt="Junior High School Image" />
+            <img src="/images/jun7.jpg" alt="Junior High School" />
           </div>
           <div className="image-item">
-            <img src="/images/jun6.jpg" alt="Junior High School Image" />
+            <img src="/images/jun6.jpg" alt="Junior High School" />
           </div>
           <div className="image-item">
-            <img src="/images/jun0.jpg" alt="Junior High School Image" />
+            <img src="/images/jun0.jpg" alt="Junior High School" />
           </div>
           <div className="image-item">
-            <img src="/images/jun2.jpg" alt="Junior High School Image" />
+            <img src="/images/jun2.jpg" alt="Junior High School" />
           </div>
           <div className="image-item">
-            <img src="/images/jun3.jpg" alt="Junior High School Image" />
+            <img src="/images/jun3.jpg" alt="Junior High School" />
           </div>
           <div className="image-item">
-            <img src="/images/jun4.jpg" alt="Junior High School Image" />
+            <img src="/images/jun4.jpg" alt="Junior High School" />
           </div>
           <div className="image-item">
-            <img src="/images/jun5.jpg" alt="Junior High School Image" />
+            <img src="/images/jun5.jpg" alt="Junior High School" />
           </div>
           
 
@@ -177,7 +177,7 @@ const JuniorHighSchool = () => {
           </div>
 
           <div className="additional-right">
-            <img src="/images/jun1.jpg" alt="Additional Image" />
+            <img src="/images/jun1.jpg" alt="Additional" />
           </div>
         </div>
       </section>

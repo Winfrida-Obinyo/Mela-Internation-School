@@ -17,28 +17,28 @@ const PreparatorySchool = () => {
 
         <div className="image-container">
           <div className="image-item">
-            <img src="/images/prep1.jpg" alt="Preparatory School Image" />
+            <img src="/images/prep1.jpg" alt="Preparatory School" />
           </div>
           <div className="image-item">
-            <img src="/images/prep2.jpg" alt="Preparatory School Image" />
+            <img src="/images/prep2.jpg" alt="Preparatory School" />
           </div>
           <div className="image-item">
-            <img src="/images/prep3.jpg" alt="Preparatory School Image" />
+            <img src="/images/prep3.jpg" alt="Preparatory School" />
           </div>
           <div className="image-item">
-            <img src="/images/prep4.jpg" alt="Preparatory School Image" />
+            <img src="/images/prep4.jpg" alt="Preparatory School" />
           </div>
           <div className="image-item">
-            <img src="/images/prep5.jpg" alt="Preparatory School Image" />
+            <img src="/images/prep5.jpg" alt="Preparatory School" />
           </div>
           <div className="image-item">
-            <img src="/images/prep6.jpg" alt="Preparatory School Image" />
+            <img src="/images/prep6.jpg" alt="Preparatory School" />
           </div>
           <div className="image-item">
-            <img src="/images/prep7.jpg" alt="Preparatory School Image" />
+            <img src="/images/prep7.jpg" alt="Preparatory School" />
           </div>
           <div className="image-item">
-            <img src="/images/prep8.jpg" alt="Preparatory School Image" />
+            <img src="/images/prep8.jpg" alt="Preparatory School" />
           </div>
         </div>
 
@@ -155,7 +155,7 @@ const PreparatorySchool = () => {
 </div>
 
           <div className="additional-right">
-            <img src="/images/pre.jpg" alt="Curriculum Focus Image" />
+            <img src="/images/pre.jpg" alt="Curriculum Focus" />
           </div>
         </div>
 
