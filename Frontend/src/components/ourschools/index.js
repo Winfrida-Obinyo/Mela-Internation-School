@@ -8,11 +8,11 @@ const OurSchools = () => {
       <div className="extracurricular">
       <div className="extracurricular-item">
           <img src="/images/studying.jpg" alt="Academic Trips" />
-          <p>British Curriculum</p>
+          <p>Kenyan CBC Curriculum Keumbu</p>
         </div>
         <div className="extracurricular-item">
           <img src="/images/cbc2.jpg" alt="Clubs and Membership" />
-          <p>Kenyan CBC Curriculum</p>
+          <p>Kenyan CBC Curriculum Narok</p>
         </div>
         <div className="extracurricular-item">
           <img src="/images/cbc1.jpg" alt="Competence Based Curriculum" />

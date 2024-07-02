@@ -15,7 +15,7 @@ const ReasonCard = ({ icon, title, description }) => {
 const ReasonsToChooseMela = () => {
   return (
     <div className="reasons-container">
-      <h2 className="choose-header">Why Choose The Mela International School</h2>
+      <h2 className="choose-header">Why Choose New Premier Talent School</h2>
       <div className="reasons-row">
         <ReasonCard icon={<FaSchool />} title="Holistic Education" description="Comprehensive approach focusing on academic excellence and student development." />
         <ReasonCard icon={<FaUsers />} title="Diverse and Inclusive Community" description="Welcoming environment celebrating multiculturalism and global perspectives." />

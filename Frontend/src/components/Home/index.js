@@ -13,7 +13,7 @@ const HomePage = () => {
 
   const captions = [
     {
-      title: 'Welcome to THE MELA INTERNATIONAL SCHOOL',
+      title: 'Welcome to New Premier Talent SCHOOL',
       description: 'Empowering students to thrive in a dynamic world.'
     },
     {

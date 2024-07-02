@@ -11,7 +11,7 @@ const Future = () => {
       <div className="future-content">
         <h2 className="future-header">YOUR FUTURE STARTS HERE</h2>
         <p className="future-paragraph">
-          At THE MELA INTERNATIONAL SCHOOL, we are committed to shaping the future of our students
+          At NEW PREMIER TALENT SCHOOL, we are committed to shaping the future of our students
           by providing quality education and nurturing their talents and abilities.
           Join us on this journey towards success!
         </p>

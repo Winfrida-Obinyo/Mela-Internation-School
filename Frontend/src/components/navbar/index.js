@@ -45,7 +45,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <a href="/" className="navbar-logo">
-          <img src="/images/logo6.png" alt="School Logo" />
+          <img src="/images/gerar2.png" alt="School Logo" />
         </a>
 
         <ul className={`nav-menu ${mobileMenuOpen ? 'mobile-menu-open' : ''}`}>

@@ -30,9 +30,9 @@ const AboutUs = () => {
         }}
       >
         <div className="about-banner" style={aboutBannerStyle}>
-          <h1>Welcome to The Mela International School</h1>
+          <h1>Welcome to New Premier Talent School</h1>
           <p>
-            At The Mela International School, we are dedicated to empowering students to thrive
+            At New Premier Talent School, we are dedicated to empowering students to thrive
             in a dynamic world. Our mission is to provide an engaging and transformative education
             experience that nurtures young minds and inspires a passion for learning.
           </p>

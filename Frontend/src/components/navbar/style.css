@@ -3,8 +3,8 @@
   /* background-color: #ffffff; */
   background: rgba(255, 255, 255, 0);
   padding: 10px; /* Adjust overall padding */
-  /* height: 85px; */
-  max-height: 65px;
+  height: 100px;
+  max-height: 90px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -16,11 +16,11 @@
 }
 
 .navbar-logo img {
-  max-width: 120px;
-  max-height: 120px;
-  height: auto;
+  max-width: 90px; /* Ensure logo doesn't exceed a certain width */
+  max-height: 50%; /* Allow logo to adjust its height */
+  margin-left: 30px;
+  margin-top: 5px;
 }
-
 .menu-icon{
   cursor: pointer;
   font-size: 24px;
@@ -151,7 +151,7 @@
   }
   
   .navbar-logo img {
-    max-width: 120px; /* Adjust logo size for smaller screens */
+    max-width: 100px; /* Adjust logo size for smaller screens */
   }
   
   .nav-menu {
