@@ -11,10 +11,10 @@ const Footer = () => {
             Address: [Your School Address]
           </li>
           <li>
-            Phone: 0783286978
+            Phone: 0712345678
           </li>
           <li>
-            Email: joeobote01@gmail.com
+            Email: gerartalentschools2@gmail.com
           </li>
         </ul>
       </div>
