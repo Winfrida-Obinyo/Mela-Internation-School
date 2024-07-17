@@ -1,3 +1,16 @@
+/* Add keyframes for zoom-in animation */
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1); /* Adjust the scale value as needed */
+  }
+}
+
 .home-page {
   display: flex;
   justify-content: center;
@@ -24,9 +37,15 @@
 .image-slider {
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
-  transition: background-image 0.5s ease;
+  position: relative;
+}
+
+.image-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: zoomIn 30s infinite; /* Apply zoom-in animation over 10 seconds */
+  transition: src 1s ease-in-out; /* Add smooth transition */
 }
 
 .banner-content {
@@ -59,19 +78,19 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin: 0 4px; /* Reduced margin between dots */
+  background-color: rgb(66, 65, 65);
 }
 
 .dot.active {
-  background-color: lightskyblue;
+  background-color: rgb(190, 15, 15);
 }
 
 .apply-button {
   display: inline-block;
   padding: 1.1px 30px;
-  /* margin-top: 30px; */
   font-size: 0.6em;
   font-weight: bold;
-  background-color: darkgreen;
+  background-color: rgb(66, 65, 65);
   color: #fff;
   border: none;
   border-radius: 50px;
@@ -81,19 +100,17 @@
 }
 
 .apply-button:hover {
-  background-color: #388e3c;
+  background-color: lightgray;
 }
 
 /* Media Queries */
 @media (max-width: 835px) {
-  /* Adjustments for screens up to 835px */
   .banner-content {
     font-size: 1.5em;
   }
 }
 
 @media (max-width: 768px) {
-  /* Adjustments for screens up to 768px (including 820px) */
   .banner-content {
     font-size: 1.3em;
   }
@@ -110,7 +127,6 @@
 }
 
 @media (max-width: 480px) {
-  /* Adjustments for extra small screens (including 360px, 375px, 390px, 280px) */
   .banner-content {
     font-size: 1.2em;
     padding: 0 10px; /* Further reduce padding for very small screens */

@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import './style.css'; 
+import './style.css';
 import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [fade, setFade] = useState(false);
+
   const images = [
     '/images/play.jpg',
     '/images/cbc2.jpg',
@@ -31,16 +33,20 @@ const HomePage = () => {
   ];
 
   const handleImageChange = (index) => {
-    setCurrentImageIndex(index);
+    setFade(true);
+    setTimeout(() => {
+      setCurrentImageIndex(index);
+      setFade(false);
+    }, ); // Match the CSS transition duration
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); 
+      handleImageChange((currentImageIndex + 1) % images.length);
+    }, 7000);
 
-    return () => clearInterval(interval);// eslint-disable-next-line
-  }, []);
+    return () => clearInterval(interval); // eslint-disable-next-line
+  }, [currentImageIndex]);
 
   const handleApplyForAdmission = () => {
     console.log('Apply for Admission button clicked');
@@ -50,12 +56,12 @@ const HomePage = () => {
   return (
     <div className="home-page">
       <div className="banner">
-        <div
-          className="image-slider"
-          style={{
-            backgroundImage: `url(${images[currentImageIndex]})`
-          }}
-        >
+        <div className="image-slider">
+          <img
+            src={images[currentImageIndex]}
+            alt="Slideshow"
+            className={fade ? 'fade-out' : ''}
+          />
           <div className="overlay"></div>
           <div className="banner-content">
             <h1>{captions[currentImageIndex].title}</h1>
@@ -86,4 +92,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-

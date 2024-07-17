@@ -52,14 +52,14 @@
   font-weight: bold;
   color: #fff;
   background-color: transparent;
-  border: 2px solid #006400;
+  border: 2px solid rgb(66, 65, 65);
   border-radius: 50px;
   cursor: pointer;
   transition: background-color 1s ease;
 }
 
 .future-button:hover {
-  background-color: lawngreen;
+  background-color: lightgrey;
 }
 
 /* Media Queries */

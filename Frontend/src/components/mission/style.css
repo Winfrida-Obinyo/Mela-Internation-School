@@ -8,11 +8,14 @@
 }
 
 .mission-item h2 {
-  color: red;
+  color: rgb(190, 15, 15);
+  text-align: center;
+  text-decoration: underline;
 }
 
 .mission-item p {
   color: black;
+  text-align: center;
 }
 
 .mission-vision-container {
@@ -27,17 +30,17 @@
 .core-values {
   font-size: 20px; /* Adjusted base font size for better readability */
   font-weight: bold;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   text-align: center;
   padding: 20px;
-  color: darkgreen;
+  color: rgb(58, 57, 57);
   background-color: white; /* Removed border, using background color instead */
   border-radius: 10px;
   width: 30%; /* Adjusted base width */
-  position: relative;
+  /* position: relative; */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added box-shadow for a subtle border effect */
-  cursor: pointer; /* Added cursor for hover effect */
+  /* cursor: pointer; Added cursor for hover effect */
   transition: background-color 0.3s ease; /* Added transition for hover effect */
 }
 

@@ -1,8 +1,7 @@
 /* Default styles */
 .navbar {
-  /* background-color: #ffffff; */
   background: rgba(255, 255, 255, 0);
-  padding: 10px; /* Adjust overall padding */
+  padding: 10px;
   height: 100px;
   max-height: 90px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -16,43 +15,39 @@
 }
 
 .navbar-logo img {
-  max-width: 90px; /* Ensure logo doesn't exceed a certain width */
-  max-height: 50%; /* Allow logo to adjust its height */
+  max-width: 90px;
+  max-height: 50%;
   margin-left: 30px;
   margin-top: 5px;
 }
-.menu-icon{
+
+.menu-icon {
   cursor: pointer;
   font-size: 24px;
   color: darkgreen;
   margin-right: 20px;
 }
 
+.nav-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  text-align: left;
+  transition: display 0.3s ease;
+}
 
 .nav-menu.active {
   display: flex;
   flex-direction: column;
   position: absolute;
   top: 80px;
-  right: 60; /* Move the menu to the right edge */
+  right: 60px;
   background-color: #28D91D;
-  width:100%;
+  width: 100%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-}
-
-
-
-.nav-menu {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  /* margin-top: 10px; */
-  /* margin-left: 60px; */
-  justify-content: space-between;
-  gap: 40px;
-  text-align: left;
-
 }
 
 .nav-item {
@@ -71,12 +66,9 @@
   color: red;
 }
 
-
-
-.enroll-button
- {
+.enroll-button {
   padding: 8px 16px;
-  background-color: green;
+  background-color: rgb(66, 65, 65);
   color: #ffffff;
   border: none;
   border-radius: 5px;
@@ -90,9 +82,8 @@
   margin-right: 20px;
 }
 
-.enroll-button:hover
- {
-  background-color: darkgreen;
+.enroll-button:hover {
+  background-color: lightgray;
 }
 
 .dropdown-menu {
@@ -121,17 +112,13 @@
   color: darkred;
 }
 
-.nav-menu.active {
+.new-nav-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
 }
 
-.new-nav-container {
-  display: flex; /* Enable flexbox layout */
-  justify-content: space-between; /* Distribute space between elements */
-}
 /* Media queries for responsiveness */
-@media(min-width: 768px) {
+@media (min-width: 768px) {
   .menu-icon {
     display: none;
   }
@@ -139,27 +126,26 @@
   .nav-link {
     font-size: large;
   }
-
 }
+
 @media (max-width: 768px) {
   .navbar {
-    height: auto; /* Change height to auto for responsiveness */
+    height: auto;
   }
 
   .menu-icon {
     display: block;
   }
-  
+
   .navbar-logo img {
-    max-width: 100px; /* Adjust logo size for smaller screens */
+    max-width: 100px;
   }
-  
+
   .nav-menu {
-    display: none; /* Hide menu items by default on smaller screens */
+    display: none;
     position: absolute;
     top: 69px;
     left: 100px;
-    /* background-color: #28D91D; */
     width: 64%;
     height: fit-content;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.87);
@@ -174,90 +160,12 @@
     display: flex;
     flex-direction: column;
   }
-  
-  /* .enroll-button, */
+
   .admin-button {
-    display: none; /* Hide enroll and admin buttons on smaller screens */
+    display: none;
   }
-  
-  .display-applicants {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .applicants-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  legend {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .applicants-list {
-    list-style-type: none;
-    padding: 0;
-    margin-bottom: 20px;
-  }
-  
-  .applicants-list li {
-    margin-bottom: 10px;
-  }
-  
-  label {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
-  
-  input[type="checkbox"] {
-    margin-right: 10px;
-  }
-  
-  .body {
-    background: linear-gradient(180deg, #28D91D 0%, #9DE6A1 0%);
-    align-items: center;
-  }
-  
-  .btn-container {
-    background: linear-gradient(180deg, #28D91D 0%, #9DE6A1 0%); 
-  }
-  
-  .button {
-    background-color: darkgreen;
-    color: #fff;
-    border: none;
-    border-radius: 50px;
-    padding: 12px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: block;
-    margin-top: 50px;
-    text-decoration: none;
-    text-align: center;
-    max-width: 160px;
-  }
-  
-    
+
   .dropdown-menu {
-    position: static; 
-    
+    position: static;
   }
-  
-
 }
-
-
-
-
-
-
-  

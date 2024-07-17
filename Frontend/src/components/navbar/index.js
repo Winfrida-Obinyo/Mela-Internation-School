@@ -54,7 +54,7 @@ const Navbar = () => {
           </li>
           <li className="nav-item">
             <a
-              href="/"
+              href="#ourschools"
               className="nav-link"
               onClick={() => toggleDropdown('schools')}
             >
