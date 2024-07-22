@@ -116,6 +116,10 @@
   justify-content: space-between;
 }
 
+.close-button {
+  display: none;
+}
+
 /* Media queries for responsiveness */
 @media (min-width: 1024px) {
   .menu-icon {
