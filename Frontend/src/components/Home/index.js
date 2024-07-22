@@ -37,16 +37,16 @@ const HomePage = () => {
     setTimeout(() => {
       setCurrentImageIndex(index);
       setFade(false);
-    }, ); // Match the CSS transition duration
+    }, 500); // Match the CSS transition duration (adjust if needed)
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
       handleImageChange((currentImageIndex + 1) % images.length);
-    }, 7000);
+    }, 5000);
 
-    return () => clearInterval(interval); // eslint-disable-next-line
-  }, [currentImageIndex]);
+    return () => clearInterval(interval);
+  }, [currentImageIndex, images.length]); // Include currentImageIndex as a dependency
 
   const handleApplyForAdmission = () => {
     console.log('Apply for Admission button clicked');
@@ -66,7 +66,7 @@ const HomePage = () => {
           <div className="banner-content">
             <h1>{captions[currentImageIndex].title}</h1>
             <p>{captions[currentImageIndex].description}</p>
-            <Link to="https://share-eu1.hsforms.com/1USPYVC7RR62fpG8nO80uRQ2e4e7p">
+            <Link to="/apply">
               <button className="apply-button" onClick={handleApplyForAdmission}>
                 Apply for Admission
               </button>

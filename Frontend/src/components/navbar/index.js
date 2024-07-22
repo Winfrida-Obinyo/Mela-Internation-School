@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './style.css'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown, faAngleUp, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown, faAngleUp, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -41,6 +41,11 @@ const Navbar = () => {
     return isOpen ? <FontAwesomeIcon icon={faAngleUp} /> : <FontAwesomeIcon icon={faAngleDown} />;
   };
 
+  const toggleMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+    document.body.classList.toggle('inactive-background', !mobileMenuOpen);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -49,6 +54,9 @@ const Navbar = () => {
         </a>
 
         <ul className={`nav-menu ${mobileMenuOpen ? 'mobile-menu-open' : ''}`}>
+          <div className="close-button" onClick={toggleMenu}>
+            <FontAwesomeIcon icon={faTimes} />
+          </div>
           <li className="nav-item">
             <a href="/" className="nav-link">Home</a>
           </li>
@@ -65,7 +73,6 @@ const Navbar = () => {
                 <li><a href="#primary">British Curriculum</a></li>
                 <li><a href="#middle">Kenyan CBC Curriculum</a></li>
                 <li><a href="#middle">East African Curriculum</a></li>
-
               </ul>
             )}
           </li>
@@ -75,15 +82,13 @@ const Navbar = () => {
               className="nav-link"
               onClick={() => toggleDropdown('about')}
             >
-              About{renderDropdownIcon('about')}
+              About {renderDropdownIcon('about')}
             </a>
             {aboutDropdownOpen && (
               <ul className="dropdown-menu">
                 <li><a href="#mission">Mission</a></li>
                 <li><a href="#vision">Vision</a></li>
                 <li><a href="#core values">Core Values</a></li>
-
-
               </ul>
             )}
           </li>
@@ -101,7 +106,6 @@ const Navbar = () => {
                 <li><a href="/preparatory">Preparatory</a></li>
                 <li><a href="/junior">Junior High School</a></li>
                 <li><a href="/senior">Senior High School</a></li>
-
               </ul>
             )}
           </li>
@@ -126,19 +130,12 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <div className='new-nav-container'>
-        <a href="https://share-eu1.hsforms.com/1xNxowBcySfG0y7CTKSu_bw2e4e7p" className="enroll-button">EnrollNow</a>
-
- 
-        {/* <div className="admin-signin-button">
-          <a href="/signin" className="admin-button">AdminSignIn</a>
-        </div> */}
-
-        <div className="menu-icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-          <FontAwesomeIcon icon={faBars} />
+        <div className="new-nav-container">
+          <a href="https://share-eu1.hsforms.com/1xNxowBcySfG0y7CTKSu_bw2e4e7p" className="enroll-button">Enroll Now</a>
+          <div className="menu-icon" onClick={toggleMenu}>
+            <FontAwesomeIcon icon={faBars} />
+          </div>
         </div>
-        </div>
-
       </div>
     </nav>
   );

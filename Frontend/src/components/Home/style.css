@@ -3,11 +3,37 @@
   0% {
     transform: scale(1);
   }
-  50%{
+  50% {
     transform: scale(1.1);
   }
   100% {
-    transform: scale(1); /* Adjust the scale value as needed */
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -15,7 +41,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 70vh;
 }
 
 .overlay {
@@ -44,8 +70,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  animation: zoomIn 30s infinite; /* Apply zoom-in animation over 10 seconds */
-  transition: src 1s ease-in-out; /* Add smooth transition */
+  animation: zoomIn 10s infinite, slide-in-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  transition: src 2s ease-in-out;
 }
 
 .banner-content {
@@ -56,8 +82,8 @@
   text-align: center;
   color: rgba(255, 255, 255, 0.9);
   z-index: 10;
-  font-size: 2em; /* Base font size for all screens */
-  padding: 0 20px; /* Reduce horizontal padding for better spacing */
+  font-size: 2em;
+  padding: 0 20px;
   display: inline-block;
 }
 
@@ -72,12 +98,12 @@
 }
 
 .dot {
-  width: 12px; /* Reduced dot size for cleaner look */
+  width: 12px;
   height: 12px;
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin: 0 4px; /* Reduced margin between dots */
+  margin: 0 4px;
   background-color: rgb(66, 65, 65);
 }
 
@@ -117,7 +143,7 @@
 
   .apply-button {
     font-size: 0.8em;
-    width: 180px; /* Adjust width for smaller screens */
+    width: 180px;
   }
 
   .admin-button {
@@ -129,12 +155,12 @@
 @media (max-width: 480px) {
   .banner-content {
     font-size: 1.2em;
-    padding: 0 10px; /* Further reduce padding for very small screens */
+    padding: 0 10px;
   }
 
   .apply-button {
     font-size: 0.7em;
-    width: 150px; /* Further reduce width for extra small screens */
+    width: 150px;
   }
 
   .admin-button {
