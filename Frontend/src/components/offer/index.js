@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import { FaBabyCarriage, FaGraduationCap, FaUserGraduate, FaUserTie } from 'react-icons/fa';
+import { FaBabyCarriage, FaGraduationCap, FaUserGraduate} from 'react-icons/fa';
 
 
 const Offer = () => {
@@ -50,7 +50,7 @@ const Offer = () => {
             </a>
           </div>
         </div>
-        <div className="offer-item">
+        {/* <div className="offer-item">
           <img src="/images/senior.jpg" alt="Senior High School" />
           <div className="offer-content">
             <FaUserTie className="offer-icon" />
@@ -63,7 +63,7 @@ const Offer = () => {
             <button className="learn-more-button">Learn More</button>
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
