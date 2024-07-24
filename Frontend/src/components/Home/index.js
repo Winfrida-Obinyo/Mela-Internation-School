@@ -13,7 +13,7 @@ const HomePage = () => {
 
   const captions = [
     {
-      title: 'Welcome to New Premier Talent SCHOOL',
+      title: 'Welcome to New Premier Talent School',
       description: 'Empowering students to thrive in a dynamic world.'
     },
     {
@@ -37,9 +37,9 @@ const HomePage = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); 
+    }, 10000);
 
-    return () => clearInterval(interval);// eslint-disable-next-line
+    return () => clearInterval(interval);
   }, []);
 
   const handleApplyForAdmission = () => {
@@ -57,6 +57,9 @@ const HomePage = () => {
           }}
         >
           <div className="overlay"></div>
+          <div className="static-banner">
+            <h1>Welcome to New Premier Talent SCHOOL</h1>
+          </div>
           <div className="banner-content">
             <h1>{captions[currentImageIndex].title}</h1>
             <p>{captions[currentImageIndex].description}</p>
