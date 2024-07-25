@@ -1,8 +1,8 @@
-/* Default styles */
+/* Default styles for mobile-first approach */
 .navbar {
   position: sticky;
   top: 0;
-  width: 100%;
+  /* width: 100%; */
   background: rgb(255, 255, 255);
   padding: 10px;
   height: 90px; /* Reduced height */
@@ -25,7 +25,7 @@
 .navbar-logo img {
   max-width: 90px;
   max-height: 50%;
-  margin-left: 30px;
+  margin-left: 15px;
   margin-top: 5px;
 }
 
@@ -33,6 +33,7 @@
   cursor: pointer;
   font-size: 24px;
   color: maroon;
+  display: none; /* Hide by default */
 }
 
 .nav-menu {
@@ -40,7 +41,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 40px;
   text-align: left;
   transition: transform 0.3s ease;
 }
@@ -49,12 +50,13 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 80px;
-  right: 60px;
+  top: 90px; /* Adjusted to ensure it's below the navbar */
+  right: 20px;
   background-color: maroon;
-  width: 100%;
+  width: 250px; /* Set a fixed width for the menu */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  padding: 10px;
 }
 
 .nav-item {
@@ -90,7 +92,6 @@
   max-width: fit-content;
   max-height: fit-content;
   text-decoration: none;
-  float: left;
   margin-right: 20px;
 }
 
@@ -102,10 +103,9 @@
   position: absolute;
   top: 100%;
   left: 30px;
-  background-color: #ffffffd3;
+  background-color: #ffffff27;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  display: none;
 }
 
 .nav-item:hover .dropdown-menu {
@@ -135,9 +135,30 @@
 }
 
 /* Media queries for responsiveness */
-@media (min-width: 1024px) {
+
+/* For tablets and larger devices */
+@media (min-width: 768px) {
+  .navbar {
+    height: 90px;
+  }
+
   .menu-icon {
-    display: none;
+    display: none; /* Hide menu icon on larger screens */
+  }
+
+  .nav-link {
+    font-size: large;
+  }
+
+  .nav-menu {
+    display: flex;
+  }
+}
+
+/* For laptops and larger devices */
+@media (min-width: 1024px) {
+  .navbar {
+    height: 90px;
   }
 
   .nav-link {
@@ -145,6 +166,7 @@
   }
 }
 
+/* For mobile devices */
 @media (max-width: 1024px) {
   .navbar {
     height: max-content;
@@ -156,6 +178,7 @@
     font-size: 24px;
     color: darkgreen;
     z-index: 1100;
+    margin-right: 15px;
   }
 
   .navbar-logo img {
@@ -165,10 +188,10 @@
   .nav-menu {
     display: none;
     position: fixed;
-    top: 0;
-    left: 20px;
-    width: calc(100% - 40px);
-    height: 100vh;
+    top: 90px; /* Adjusted to be below the navbar */
+    left: 0; /* Full width menu */
+    width: 100%;
+    height: calc(100vh - 90px); /* Full height minus the navbar */
     background-color: #fdf9f9;
     flex-direction: column;
     justify-content: flex-start;
@@ -176,12 +199,16 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.87);
     z-index: 1000;
     list-style: none;
-    padding: 20px;
+    padding: 10px;
     overflow-y: auto;
+    transform: translateX(-100%); /* Hide off-screen initially */
+    transition: transform 0.3s ease; /* Slide in effect */
   }
 
   .nav-menu.mobile-menu-open {
     display: flex;
+    transform: translateX(0); /* Slide in when active */
+    overflow-x: hidden;
   }
 
   .nav-link {
@@ -194,17 +221,20 @@
   .dropdown-menu {
     position: static;
   }
-
+  
+  /* CSS for close button */
   .close-button {
+    display: block;
     position: absolute;
     top: 20px;
     right: 20px;
     font-size: 24px;
     color: darkgreen;
     cursor: pointer;
-    z-index: 1100;
+    z-index: 1100; /* Ensure it's above other elements */
   }
 
+  /* CSS for inactive background */
   .inactive-background {
     overflow: hidden;
     height: 100vh;
@@ -212,11 +242,12 @@
     width: 100%;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 999; /* Ensure it's below the menu but above content */
   }
 }
 
+/* For very small mobile devices */
 @media (max-width: 768px) {
   .nav-link {
     font-size: 1.2em;
