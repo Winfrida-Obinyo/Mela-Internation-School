@@ -1,3 +1,4 @@
+/* General Styles */
 .footer-container {
   background: rgb(66, 65, 65);
   color: #fff;
@@ -31,7 +32,7 @@
   font-size: 18px;
 }
 
-/* Media query for responsiveness */
+/* Media query for tablets (e.g., iPad Mini) */
 @media (max-width: 768px) {
   .footer-container {
     grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
@@ -53,9 +54,29 @@
   }
 }
 
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+  .footer-container {
+    grid-template-columns: 1fr; /* Single column for very small screens */
+    gap: 10px; /* Maintain gap between sections */
+    padding: 15px 5px; /* Adjust padding for very small screens */
+  }
 
+  .footer-section {
+    margin-bottom: 15px; /* Add margin for spacing between sections */
+  }
 
-  
+  .footer-section h3 {
+    font-size: 14px; /* Further adjust heading font size for very small screens */
+    margin-bottom: 6px; /* Reduce margin for headings */
+  }
 
-  
-  
+  .contact-list li {
+    margin-bottom: 8px; /* Further reduce margin between contact list items */
+  }
+
+  .icon {
+    font-size: 16px; /* Adjust icon size for smaller screens */
+    margin-right: 8px; /* Reduce margin for icons */
+  }
+}

@@ -1,5 +1,6 @@
 /* Default styles */
 .navbar {
+  position: static;
   background: rgba(255, 255, 255, 0);
   padding: 10px;
   height: 100px;
@@ -25,7 +26,7 @@
 .menu-icon {
   cursor: pointer;
   font-size: 24px;
-  color: darkgreen;
+  color: maroon;
 }
 
 .nav-menu {
@@ -44,7 +45,7 @@
   position: absolute;
   top: 80px;
   right: 60px;
-  background-color: #28D91D;
+  background-color: maroon;
   width: 100%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -57,7 +58,7 @@
 
 .nav-link {
   text-decoration: none;
-  color: darkgreen;
+  color: maroon;
   transition: color 0.3s ease;
   font-weight: bold;
 }
@@ -80,7 +81,6 @@
   text-decoration: none;
   float: left;
   margin-right: 20px;
-  
 }
 
 .enroll-button:hover {
