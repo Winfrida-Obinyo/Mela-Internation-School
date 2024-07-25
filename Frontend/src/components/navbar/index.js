@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faAngleUp, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -9,25 +9,44 @@ const Navbar = () => {
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [academicDropdownOpen, setAcademicDropdownOpen] = useState(false);
   const [schoolLifeDropdownOpen, setSchoolLifeDropdownOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  // const toggleDropdown = (dropdown) => {
+  //   switch (dropdown) {
+  //     case 'schools':
+  //       setSchoolsDropdownOpen(!schoolsDropdownOpen);
+  //       break;
+  //     case 'about':
+  //       setAboutDropdownOpen(!aboutDropdownOpen);
+  //       break;
+  //     case 'academic':
+  //       setAcademicDropdownOpen(!academicDropdownOpen);
+  //       break;
+  //     case 'schoolLife':
+  //       setSchoolLifeDropdownOpen(!schoolLifeDropdownOpen);
+  //       break;
+  //     default:
+  //       break;
+  //   }
+  // };
 
   const toggleDropdown = (dropdown) => {
-    switch (dropdown) {
-      case 'schools':
-        setSchoolsDropdownOpen(!schoolsDropdownOpen);
-        break;
-      case 'about':
-        setAboutDropdownOpen(!aboutDropdownOpen);
-        break;
-      case 'academic':
-        setAcademicDropdownOpen(!academicDropdownOpen);
-        break;
-      case 'schoolLife':
-        setSchoolLifeDropdownOpen(!schoolLifeDropdownOpen);
-        break;
-      default:
-        break;
-    }
+    setSchoolsDropdownOpen(dropdown === 'schools' ? !schoolsDropdownOpen : false);
+    setAboutDropdownOpen(dropdown === 'about' ? !aboutDropdownOpen : false);
+    setAcademicDropdownOpen(dropdown === 'academic' ? !academicDropdownOpen : false);
+    setSchoolLifeDropdownOpen(dropdown === 'schoolLife' ? !schoolLifeDropdownOpen : false);
   };
+  
 
   const renderDropdownIcon = (dropdown) => {
     const isOpen = dropdown === 'schools'
@@ -47,7 +66,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <a href="/" className="navbar-logo">
           <img src="/images/gerar2.png" alt="School Logo" />

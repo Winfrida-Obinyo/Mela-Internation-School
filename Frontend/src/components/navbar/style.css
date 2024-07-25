@@ -1,19 +1,25 @@
 /* Default styles */
 .navbar {
-  position: static;
-  background: rgba(255, 255, 255, 0);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgb(255, 255, 255);
   padding: 10px;
-  height: 100px;
-  max-height: 90px;
+  height: 90px; /* Reduced height */
+  transition: height 0.3s ease;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: static;
+  z-index: 1000;
+}
+
+.navbar.scrolled {
+  height: 70px; /* Height when scrolled */
 }
 
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  height: 100%;
 }
 
 .navbar-logo img {
@@ -34,9 +40,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: 20px;
   text-align: left;
-  transition: display 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .nav-menu.active {
@@ -59,8 +65,13 @@
 .nav-link {
   text-decoration: none;
   color: maroon;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
   font-weight: bold;
+  margin: 0 10px;
+}
+
+.navbar.scrolled .nav-item {
+  transform: translateY(50%);
 }
 
 .nav-link:hover {
@@ -91,9 +102,10 @@
   position: absolute;
   top: 100%;
   left: 30px;
-  background-color: #ffffff27;
+  background-color: #ffffffd3;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  display: none;
 }
 
 .nav-item:hover .dropdown-menu {
@@ -154,13 +166,13 @@
     display: none;
     position: fixed;
     top: 0;
-    left: 20px; /* Small gap on the left */
-    width: calc(100% - 40px); /* Account for the gap on both sides */
+    left: 20px;
+    width: calc(100% - 40px);
     height: 100vh;
     background-color: #fdf9f9;
     flex-direction: column;
-    justify-content: flex-start; /* Start from the top */
-    align-items: flex-start; /* Align items to the left */
+    justify-content: flex-start;
+    align-items: flex-start;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.87);
     z-index: 1000;
     list-style: none;
@@ -172,8 +184,6 @@
     display: flex;
   }
 
-
-
   .nav-link {
     font-size: 1.5em;
     text-align: center;
@@ -184,19 +194,17 @@
   .dropdown-menu {
     position: static;
   }
-  
-  /* CSS for close button */
+
   .close-button {
     position: absolute;
-    top: 20px; /* Adjust as needed */
-    right: 20px; /* Adjust as needed */
+    top: 20px;
+    right: 20px;
     font-size: 24px;
     color: darkgreen;
     cursor: pointer;
-    z-index: 1100; /* Ensure it's above other elements */
+    z-index: 1100;
   }
 
-  /* CSS for inactive background */
   .inactive-background {
     overflow: hidden;
     height: 100vh;
@@ -204,20 +212,19 @@
     width: 100%;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
-    z-index: 999; /* Ensure it's below the menu but above content */
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
   }
 }
 
-/* Additional media queries for smaller screens */
 @media (max-width: 768px) {
   .nav-link {
     font-size: 1.2em;
   }
 
   .close-button {
-    top: 10px; /* Adjust for smaller screens */
-    right: 10px; /* Adjust for smaller screens */
+    top: 10px;
+    right: 10px;
   }
 }
 
@@ -227,11 +234,11 @@
   }
 
   .navbar-logo img {
-    max-width: 50px; /* Adjust for very small screens */
+    max-width: 50px;
   }
 
   .close-button {
-    top: 5px; /* Adjust for very small screens */
-    right: 5px; /* Adjust for very small screens */
+    top: 5px;
+    right: 5px;
   }
 }

@@ -37,7 +37,7 @@ const HomePage = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 10000);
+    }, 5000);
 
     return () => clearInterval(interval);// eslint-disable-next-line
   }, []);
@@ -51,11 +51,12 @@ const HomePage = () => {
     <div className="home-page">
       <div className="banner">
         <div
+          key={currentImageIndex}
           className="image-slider"
           style={{
             backgroundImage: `url(${images[currentImageIndex]})`
           }}
-        >
+        ></div>
           <div className="overlay"></div>
           <div className="static-banner">
             <h1>Welcome to New Premier Talent School</h1>
@@ -84,7 +85,7 @@ const HomePage = () => {
           ))}
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 

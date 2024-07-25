@@ -1,3 +1,29 @@
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
 /* General Styles */
 .home-page {
   position: relative;
@@ -13,6 +39,7 @@
   background-size: cover;
   background-position: center;
   position: relative;
+  animation: scale-in-center 1.5s ease-out;
 }
 
 .overlay {
@@ -74,7 +101,7 @@
 }
 
 .apply-button:hover {
-  background-color: rgb(66, 65, 65);
+  background-color: gray;
 }
 
 .navigation-dots {
@@ -96,7 +123,10 @@
 }
 
 .dot.active {
-  background-color: rgb(66, 65, 65)maroon;
+  background-color: rgb(226, 24, 24);
+}
+.dot:hover {
+  background-color: maroon;
 }
 
 /* Media Queries */
