@@ -1,7 +1,18 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './style.css';
 
 const FeeStructure = () => {
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "auto", // Instant scroll
+    });
+  };
+
+  useEffect(() => {
+    scrollToTop();
+  }, []); // This will scroll to top when Kindergarten component mounts
   const feeData = {
     kindergarten: [
       { grade: 'Nursery', tuitionFees: 1500, otherFees: 200 },

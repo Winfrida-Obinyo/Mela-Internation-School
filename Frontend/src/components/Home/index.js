@@ -5,20 +5,20 @@ import { Link } from 'react-router-dom';
 const HomePage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
-    '/images/play.jpg',
-    '/images/cbc2.jpg',
-    '/images/cbc1.jpg',
-    '/images/students.jpg'
+    '/images/gerarnarok.jpeg',
+    '/images/children_playing1.jpeg',
+    '/images/gerarnarok4.jpeg',
+    '/images/children_playing5.jpeg'
   ];
 
   const captions = [
     {
-      title: 'Welcome to New Premier Talent School',
-      description: 'Empowering students to thrive in a dynamic world.'
-    },
-    {
       title: 'Explore a World of Learning',
       description: 'Where curiosity meets knowledge.'
+    },
+    {
+      title: 'Empower Minds, Inspire Futures',
+      description: 'Shaping tomorrow\'s leaders today'
     },
     {
       title: 'Engaging Education Experience',

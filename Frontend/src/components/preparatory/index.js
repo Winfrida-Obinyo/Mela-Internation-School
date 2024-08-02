@@ -1,164 +1,135 @@
-import React, { useState } from 'react';
+import React, {useEffect} from 'react';
 import './style.css';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
 const PreparatorySchool = () => {
-  const [activeDropdown, setActiveDropdown] = useState(null);
 
-  const handleDropdownClick = (dropdownId) => {
-    setActiveDropdown(activeDropdown === dropdownId ? null : dropdownId);
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "auto", // Instant scroll
+    });
   };
 
+  useEffect(() => {
+    scrollToTop();
+  }, []); // This will scroll to top when Kindergarten component mounts
   return (
     <div className="preparatory-school-container">
-      <section className="left-section">
-        <h2 className="section-title">Preparatory School</h2>
+      <section className="content-section">
+        <h2 className="section-title">Welcome to Our Preparatory School</h2>
 
-        <div className="image-container">
-          <div className="image-item">
-            <img src="/images/prep1.jpg" alt="Preparatory School" />
+        <div className="highlights-container">
+          <div className="highlight">
+            <p>
+              At our preparatory school, we believe in fostering academic excellence, critical
+              thinking, and a love for learning. Our curriculum is designed to prepare students
+              for future success in a supportive and dynamic environment.
+            </p>
+            <img src="/images/prep1.jpg" alt="Preparatory School Highlight 1" />
           </div>
-          <div className="image-item">
-            <img src="/images/prep2.jpg" alt="Preparatory School" />
-          </div>
-          <div className="image-item">
-            <img src="/images/prep3.jpg" alt="Preparatory School" />
-          </div>
-          <div className="image-item">
-            <img src="/images/prep4.jpg" alt="Preparatory School" />
-          </div>
-          <div className="image-item">
-            <img src="/images/prep5.jpg" alt="Preparatory School" />
-          </div>
-          <div className="image-item">
-            <img src="/images/prep6.jpg" alt="Preparatory School" />
-          </div>
-          <div className="image-item">
-            <img src="/images/prep7.jpg" alt="Preparatory School" />
-          </div>
-          <div className="image-item">
-            <img src="/images/prep8.jpg" alt="Preparatory School" />
+          <div className="highlight reverse">
+            <img src="/images/prep3.jpg" alt="Preparatory School Highlight 2" />
+            <p>
+              Our diverse curriculum spans across mathematics, science, humanities, and arts,
+              ensuring that students receive a well-rounded education that ignites their curiosity
+              and passion for discovery.
+            </p>
           </div>
         </div>
 
         <div className="info-container">
-          <div className="info-left">
-            <h3>School Curriculum Highlights</h3>
-            <p>
-              Our preparatory school curriculum emphasizes academic rigor, critical thinking,
-              and character development to prepare students for advanced education and lifelong success.
-            </p>
-            <p>
-              Students engage in comprehensive studies across various subjects,
-              including mathematics, science, humanities, and arts, fostering a well-rounded education.
-            </p>
-
+          <div className="info-content">
+            <h3 className="info-header">
+              Academic Programs
+            </h3>
+            
+              <div className="info-details">
+                <p>
+                  Our academic programs are designed to challenge and inspire. Students can explore
+                  advanced coursework, honors tracks, and enrichment opportunities that push the
+                  boundaries of traditional learning.
+                </p>
+              </div>
+            
           </div>
 
-          <div className="info-right">
-            <div className="dropdown">
-              <button
-                className="dropdown-btn"
-                onClick={() => handleDropdownClick('academics')}
-              >
-                Academic Programs
-              </button>
-              {activeDropdown === 'academics' && (
-                <div className="dropdown-content">
-                  <p>
-                    Explore our diverse academic programs designed to challenge and inspire students,
-                    covering advanced coursework, honors tracks, and enrichment opportunities.
-                  </p>
-                </div>
-              )}
-            </div>
+          <div className="info-content">
+            <h3 className="info-header">
+              Extracurricular Activities
+            </h3>
+            
+              <div className="info-details">
+                <p>
+                  Beyond the classroom, our school offers a wide range of extracurricular activities,
+                  including sports, arts, and leadership programs. These activities provide students
+                  with valuable skills and experiences that complement their academic journey.
+                </p>
+              </div>
+            
+          </div>
 
-            <div className="dropdown">
-              <button
-                className="dropdown-btn"
-                onClick={() => handleDropdownClick('extracurricular')}
-              >
-                Extracurricular Activities
-              </button>
-              {activeDropdown === 'extracurricular' && (
-                <div className="dropdown-content">
-                  <p>
-                    Discover our range of extracurricular activities, including sports, clubs,
-                    community service initiatives, and leadership programs to complement academic studies.
-                  </p>
-                </div>
-              )}
-            </div>
-
-            <div className="dropdown">
-              <button
-                className="dropdown-btn"
-                onClick={() => handleDropdownClick('college-prep')}
-              >
-                College Preparation
-              </button>
-              {activeDropdown === 'college-prep' && (
-                <div className="dropdown-content">
-                  <p>
-                    Prepare for higher education with dedicated college counseling,
-                    SAT/ACT preparation, and college application guidance to support students
-                    in achieving their academic and career aspirations.
-                  </p>
-                </div>
-              )}
-            </div>
+          <div className="info-content">
+            <h3 className="info-header">
+              College Preparation
+            </h3>
+            
+              <div className="info-details">
+                <p>
+                  Preparing for college is a significant aspect of our program. We provide dedicated
+                  college counseling, SAT/ACT preparation, and guidance through the application process
+                  to help students achieve their academic and career goals.
+                </p>
+              </div>
+           
           </div>
         </div>
 
         <div className="additional-section">
-          <div className="additional-left">
-  <h3>Early Years Curriculum</h3>
-  <br></br>
-  <h4>Prime Areas of Learning:</h4>
-  <p>
-    Personal, Social and Emotional Development: Building positive relationships,
-    self-awareness, and emotional regulation.
-  </p>
-  <p>
-    Communication and Language: Developing listening, speaking, and early
-    literacy skills through interactions and language activities.
-  </p>
-  <p>
-    Physical Development: Promoting physical health, coordination, and motor skills
-    through play and movement.
-  </p>
-  <h4>Specific Areas of Learning:</h4>
-  <p>
-    Literacy: Cultivating reading and writing readiness, fostering a joy for books,
-    and early language exploration.
-  </p>
-  <p>
-    Mathematics: Building numeracy skills, understanding numbers, shapes, and basic
-    mathematical concepts through hands-on activities.
-  </p>
-  <p>
-    Expressive Arts and Design: Encouraging creativity through art, music, movement,
-    and imaginative play, fostering self-expression and exploration.
-  </p>
-
-  <h3>Curriculum Focus</h3>
-  <p>
-    Our preparatory school curriculum is designed to cultivate critical thinking skills,
-    foster intellectual curiosity, and nurture a passion for lifelong learning.
-  </p>
-  <p>
-    Students are encouraged to explore interdisciplinary connections,
-    engage in research projects, and develop leadership qualities
-    through academic challenges and collaborative endeavors.
-  </p>
-</div>
-
-          <div className="additional-right">
-            <img src="/images/pre.jpg" alt="Curriculum Focus" />
+          <h3 className='info-header bottom'>Our Curriculum Highlights</h3>
+          <div className="curriculum-content">
+            <div className="curriculum-item">
+              <p>
+                Our curriculum emphasizes critical thinking and intellectual curiosity. Students
+                engage in collaborative projects, research, and discussions that foster a deep
+                understanding of various subjects.
+              </p>
+              <img src="/images/pre.jpg" alt="Curriculum Focus" />
+            </div>
+            <div className="curriculum-item reverse">
+              <p>
+                We encourage students to explore interdisciplinary connections and develop leadership
+                skills through academic challenges and teamwork. Our goal is to prepare students
+                for success in a rapidly changing world.
+              </p>
+            </div>
           </div>
+          <h4>Prime Areas of Learning:</h4>
+          <p>
+            <strong>Personal, Social and Emotional Development:</strong> Building positive relationships,
+            self-awareness, and emotional regulation.
+          </p>
+          <p>
+            <strong>Communication and Language:</strong> Developing listening, speaking, and early
+            literacy skills through interactions and language activities.
+          </p>
+          <p>
+            <strong>Physical Development:</strong> Promoting physical health, coordination, and motor skills
+            through play and movement.
+          </p>
+          <h4>Specific Areas of Learning:</h4>
+          <p>
+            <strong>Literacy:</strong> Cultivating reading and writing readiness, fostering a joy for books,
+            and early language exploration.
+          </p>
+          <p>
+            <strong>Mathematics:</strong> Building numeracy skills, understanding numbers, shapes, and basic
+            mathematical concepts through hands-on activities.
+          </p>
+          <p>
+            <strong>Expressive Arts and Design:</strong> Encouraging creativity through art, music, movement,
+            and imaginative play, fostering self-expression and exploration.
+          </p>
         </div>
-
       </section>
     </div>
   );

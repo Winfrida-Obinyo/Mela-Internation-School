@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
@@ -9,6 +9,18 @@ const JuniorHighSchool = () => {
   const handleDropdownClick = (dropdownId) => {
     setActiveDropdown(activeDropdown === dropdownId ? null : dropdownId);
   };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "auto", // Instant scroll
+    });
+  };
+
+  useEffect(() => {
+    scrollToTop();
+  }, []); // This will scroll to top when Kindergarten component mounts
+  
 
   return (
     <div className="junior-high-school-container">

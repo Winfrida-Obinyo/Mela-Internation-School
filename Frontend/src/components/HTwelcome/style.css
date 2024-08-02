@@ -1,0 +1,52 @@
+.headteacher-welcome-container {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.image-and-text {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px; /* Space below the image and text */
+}
+
+.welcome {
+  width: 40%; /* Adjust width as needed */
+  max-height: 400px; /* Limit the height of the image */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px; /* Space between image and text */
+}
+
+.text-content {
+  width: 60%; /* Adjust width as needed */
+}
+
+.paragraph {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.bottom-paragraphs p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .image-and-text {
+    flex-direction: column; /* Stack image and text vertically on smaller screens */
+    align-items: center;
+  }
+
+  .welcome {
+    width: 100%;
+    max-height: 300px;
+    margin-right: 0;
+  }
+
+  .text-content {
+    width: 100%;
+  }
+}
