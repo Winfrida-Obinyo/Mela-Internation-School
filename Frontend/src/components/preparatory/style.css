@@ -40,8 +40,8 @@ body {
 }
 
 .highlight.reverse {
-  flex-direction: row;
-  gap: 5px;
+  flex-direction: row-reverse;
+  gap: 20px;
 }
 
 .highlight img {
@@ -122,11 +122,22 @@ body {
   text-align: left;
 }
 
+/* Specific styles for Prime Areas of Learning */
+.additional-section .prime-areas {
+  border: 2px solid #800000; /* Maroon color border */
+  border-radius: 8px;
+  padding: 15px;
+  display: inline-block;
+  text-align: left;
+  margin: 0 auto;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  background-color: #ffffff; /* Ensuring background color contrasts with border */
+}
+
 /* Responsive design */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .highlights-container,
   .info-container,
-  .additional-section,
   .curriculum-content {
     flex-direction: column;
   }
@@ -134,10 +145,65 @@ body {
   .highlight,
   .curriculum-item {
     flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .highlight img,
   .curriculum-item img {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .highlight img,
+  .curriculum-item img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.75em;
+  }
+
+  .info-header {
+    font-size: 1.3em;
+  }
+
+  .info-details,
+  .prime-areas {
+    padding: 10px;
+  }
+
+  .highlight,
+  .curriculum-item {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.5em;
+  }
+
+  .info-header {
+    font-size: 1.2em;
+  }
+
+  .info-details,
+  .prime-areas {
+    padding: 8px;
+  }
+
+  .highlight img,
+  .curriculum-item img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .additional-section h4,
+  .additional-section p {
+    font-size: 0.9em;
   }
 }

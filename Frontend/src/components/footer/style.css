@@ -17,19 +17,27 @@
   margin-bottom: 10px;
 }
 
+/* Contact List Styles */
 .contact-list {
+  list-style: none;
   padding: 0;
 }
 
 .contact-list li {
-  margin-bottom: 15px;
   display: flex;
   align-items: center;
+  margin-bottom: 10px; /* Updated margin */
+}
+
+.contact-list li .fa-icon {
+  margin-right: 20px; /* Adjust spacing between icon and text */
 }
 
 .icon {
-  margin-right: 10px;
+  margin-right: 15px; /* Add space to the right of the icon */
   font-size: 18px;
+  color: maroon;
+  margin-right: 20px; /* Add space to the left of the icon */
 }
 
 .footer-section ul li a {
@@ -39,6 +47,15 @@
 
 .footer-section ul li a:hover {
   text-decoration-color: maroon; /* Optional: Add underline on hover */
+}
+
+/* Add this CSS section if not already included */
+.footer-copyright {
+  grid-column: 1 / -1; /* Make it span across all columns */
+  text-align: center;
+  font-size: 12px; /* Adjust font size as needed */
+  margin-top: 20px; /* Add some space above the copyright text */
+  color: #fff; /* Ensure text is visible */
 }
 
 /* Media query for tablets (e.g., iPad Mini) */
@@ -84,8 +101,9 @@
     margin-bottom: 8px; /* Further reduce margin between contact list items */
   }
 
-  .icon {
+  .icon, 
+  .contact-list li .fa-icon {
     font-size: 16px; /* Adjust icon size for smaller screens */
-    margin-right: 8px; /* Reduce margin for icons */
+    margin: 0 10px; /* Add space on both left and right of the icons */
   }
 }

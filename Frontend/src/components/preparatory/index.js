@@ -85,7 +85,6 @@ const PreparatorySchool = () => {
         </div>
 
         <div className="additional-section">
-          <h3 className='info-header bottom'>Our Curriculum Highlights</h3>
           <div className="curriculum-content">
             <div className="curriculum-item">
               <p>
